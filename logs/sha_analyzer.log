@@ -1,0 +1,634 @@
+2025-11-23 09:36:29,756 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 09:36:29,811 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 09:51:55,519 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 09:51:55,737 - sha_analyzer - INFO - Processing: joseph muiruri notes.pdf
+2025-11-23 09:51:55,839 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpc68wy36h.pdf
+2025-11-23 09:51:55,901 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 09:51:57,028 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpyscomq4a.pdf
+2025-11-23 09:51:57,028 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 09:51:57,168 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-23 09:51:57,168 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-23 09:51:57,168 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-23 09:51:57,168 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-23 09:51:57,168 - sha_analyzer - INFO - Extraction Method: None
+2025-11-23 09:51:57,179 - sha_analyzer - INFO - Fields Detected: []
+2025-11-23 09:51:57,181 - sha_analyzer - INFO - Document saved to history with ID: 6
+2025-11-23 10:04:00,106 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 10:04:00,106 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 10:04:16,963 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 10:04:16,968 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 10:43:58,755 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 10:43:59,025 - sha_analyzer - INFO - Processing: joseph muiruri form.pdf
+2025-11-23 10:43:59,096 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmp_qdjql4s.pdf
+2025-11-23 10:43:59,225 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 10:43:59,861 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpcojv6mtt.pdf
+2025-11-23 10:43:59,861 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 10:44:00,282 - sha_analyzer - ERROR - SHA ANALYSIS ERROR: 'SHAComplianceAI' object has no attribute 'generate_approval_recommendations'
+2025-11-23 10:51:24,177 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 10:51:24,715 - sha_analyzer - INFO - Processing: joseph muiruri form.pdf
+2025-11-23 10:51:24,985 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpa1chpp_u.pdf
+2025-11-23 10:51:25,013 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 10:51:25,021 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpafkgw8al.pdf
+2025-11-23 10:51:25,226 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 10:51:25,316 - sha_analyzer - ERROR - SHA ANALYSIS ERROR: 'SHAComplianceAI' object has no attribute 'generate_approval_recommendations'
+2025-11-23 11:04:25,874 - sha_analyzer - INFO - Received signal 2, shutting down...
+2025-11-23 11:04:25,992 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 11:04:25,992 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 11:04:26,077 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 11:04:26,087 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 11:35:29,765 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 11:35:30,474 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 11:35:36,463 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 11:35:36,476 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 11:43:40,536 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 11:43:41,212 - sha_analyzer - INFO - Processing: kiprotich summary.pdf
+2025-11-23 11:43:42,346 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmprla20dsf.pdf
+2025-11-23 11:43:42,346 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 11:43:43,370 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpwnd5zrxg.pdf
+2025-11-23 11:43:43,386 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 11:43:43,454 - sha_analyzer - ERROR - SHA ANALYSIS ERROR: 'SHAComplianceAI' object has no attribute 'generate_approval_recommendations'
+2025-11-23 11:44:21,965 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 11:44:21,988 - sha_analyzer - INFO - Processing: kiprotich summary.pdf
+2025-11-23 11:44:22,207 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpjr7orbyr.pdf
+2025-11-23 11:44:22,270 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 11:44:22,481 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpqypjf9f0.pdf
+2025-11-23 11:44:22,482 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 11:44:22,483 - sha_analyzer - ERROR - SHA ANALYSIS ERROR: 'SHAComplianceAI' object has no attribute 'generate_approval_recommendations'
+2025-11-23 11:47:26,052 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 11:47:26,109 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 11:47:33,729 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 11:47:33,729 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 12:28:03,677 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 12:28:03,724 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 12:30:14,334 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 12:30:14,914 - sha_analyzer - INFO - Processing: joseph muiruri notes.pdf
+2025-11-23 12:30:15,289 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpre24bvpq.pdf
+2025-11-23 12:30:15,663 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 12:30:17,343 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpsaq9v6_6.pdf
+2025-11-23 12:30:17,347 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 12:30:17,514 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-23 12:30:17,514 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-23 12:30:17,514 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-23 12:30:17,514 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-23 12:30:17,514 - sha_analyzer - INFO - Extraction Method: None
+2025-11-23 12:30:17,520 - sha_analyzer - INFO - Fields Detected: []
+2025-11-23 12:30:17,520 - sha_analyzer - INFO - Document saved to history with ID: 7
+2025-11-23 12:55:39,891 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 12:55:40,057 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 12:56:04,169 - sha_analyzer - WARNING - Azure Computer Vision is not configured. Using fallback OCR methods.
+2025-11-23 12:56:51,645 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 12:56:51,865 - sha_analyzer - INFO - Processing: joseph muiruri form.pdf
+2025-11-23 12:56:52,021 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpzlo49590.pdf
+2025-11-23 12:56:52,110 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 12:56:52,525 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpntt3g76p.pdf
+2025-11-23 12:56:52,603 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 12:56:53,104 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-23 12:56:53,112 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-23 12:56:53,113 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-23 12:56:53,113 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-23 12:56:53,114 - sha_analyzer - INFO - Extraction Method: None
+2025-11-23 12:56:53,114 - sha_analyzer - INFO - Fields Detected: []
+2025-11-23 12:56:53,115 - sha_analyzer - INFO - Document saved to history with ID: 8
+2025-11-23 13:14:52,479 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-23 13:14:52,479 - sha_analyzer - INFO - Cleanup complete.
+2025-11-23 13:15:17,563 - sha_analyzer - WARNING - Azure Computer Vision is not configured. Using fallback OCR methods.
+2025-11-23 13:16:09,175 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 13:16:09,570 - sha_analyzer - INFO - Processing: virginia notes.pdf
+2025-11-23 13:16:10,587 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpq3__heq_.pdf
+2025-11-23 13:16:10,660 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 13:16:11,103 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmputxjp9xf.pdf
+2025-11-23 13:16:11,199 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 13:16:11,507 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-23 13:16:11,823 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-23 13:16:12,194 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-23 13:16:12,247 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-23 13:16:12,648 - sha_analyzer - INFO - Extraction Method: None
+2025-11-23 13:16:12,648 - sha_analyzer - INFO - Fields Detected: []
+2025-11-23 13:16:12,684 - sha_analyzer - INFO - Document saved to history with ID: 9
+2025-11-23 23:29:42,672 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-23 23:29:48,341 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-23 23:36:41,985 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 23:36:42,279 - sha_analyzer - INFO - Processing: rachael Njoroge claim.pdf
+2025-11-23 23:36:42,617 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmp5o7_izqs.pdf
+2025-11-23 23:36:42,789 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 23:36:43,071 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmp3phbsa69.pdf
+2025-11-23 23:36:43,071 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 23:36:43,525 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-23 23:36:43,828 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-23 23:36:43,852 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-23 23:36:44,163 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-23 23:36:44,163 - sha_analyzer - INFO - Extraction Method: None
+2025-11-23 23:36:44,163 - sha_analyzer - INFO - Fields Detected: []
+2025-11-23 23:36:44,163 - sha_analyzer - INFO - Document saved to history with ID: 10
+2025-11-23 23:40:09,071 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 23:40:09,694 - sha_analyzer - INFO - Processing: david mutunga kimanzi noted.pdf
+2025-11-23 23:40:09,911 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpz1l4vacs.pdf
+2025-11-23 23:40:10,021 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 23:40:10,408 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmp87wkcs5h.pdf
+2025-11-23 23:40:10,479 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 23:40:10,735 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-23 23:40:10,740 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-23 23:40:10,750 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-23 23:40:10,752 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-23 23:40:10,752 - sha_analyzer - INFO - Extraction Method: None
+2025-11-23 23:40:10,752 - sha_analyzer - INFO - Fields Detected: []
+2025-11-23 23:40:10,752 - sha_analyzer - INFO - Document saved to history with ID: 11
+2025-11-23 23:40:57,406 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-23 23:40:57,426 - sha_analyzer - INFO - Processing: joseph muiruri form.pdf
+2025-11-23 23:40:57,479 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpzwmtvwe_.pdf
+2025-11-23 23:40:57,671 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-23 23:40:57,815 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpp3vq74r_.pdf
+2025-11-23 23:40:57,871 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-23 23:40:58,023 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-23 23:40:58,324 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-23 23:40:58,562 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-23 23:40:58,806 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-23 23:40:58,806 - sha_analyzer - INFO - Extraction Method: None
+2025-11-23 23:40:58,806 - sha_analyzer - INFO - Fields Detected: []
+2025-11-23 23:40:58,806 - sha_analyzer - INFO - Document saved to history with ID: 1
+2025-11-24 00:12:15,675 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 00:12:15,694 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 00:12:19,899 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 00:12:19,916 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 00:30:31,330 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 00:30:36,809 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 00:34:39,662 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 00:34:40,082 - sha_analyzer - INFO - Processing: rachael Njoroge claim.pdf
+2025-11-24 00:34:40,421 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmp0i0cao1p.pdf
+2025-11-24 00:34:40,645 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-24 00:34:41,355 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpndy61dye.pdf
+2025-11-24 00:34:41,355 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-24 00:34:41,618 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-24 00:34:41,696 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-24 00:34:41,743 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-24 00:34:41,759 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-24 00:34:41,759 - sha_analyzer - INFO - Extraction Method: None
+2025-11-24 00:34:41,784 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 00:34:41,791 - sha_analyzer - INFO - Document saved to history with ID: 2
+2025-11-24 00:35:34,517 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 00:35:34,973 - sha_analyzer - INFO - Processing: joseph muiruri form.pdf
+2025-11-24 00:35:35,422 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpd8wmvqrn.pdf
+2025-11-24 00:35:35,585 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-24 00:35:35,588 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmp5xtrv0ow.pdf
+2025-11-24 00:35:35,589 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-24 00:35:35,592 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-24 00:35:35,593 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-24 00:35:35,593 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-24 00:35:35,594 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-24 00:35:35,594 - sha_analyzer - INFO - Extraction Method: None
+2025-11-24 00:35:35,595 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 00:35:35,595 - sha_analyzer - INFO - Document saved to history with ID: 3
+2025-11-24 00:54:26,532 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 00:54:26,535 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 00:54:33,744 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 00:55:07,029 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 00:55:07,060 - sha_analyzer - INFO - Processing: joy wanja form.pdf
+2025-11-24 00:55:07,065 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpgk1hm7pm.pdf
+2025-11-24 00:55:07,362 - sha_analyzer - ERROR - PDF processing error: No /Root object! - Is this really a PDF?
+2025-11-24 00:55:07,517 - sha_analyzer - INFO - Initial extraction completed: 62 total characters
+2025-11-24 00:55:07,537 - sha_analyzer - INFO - ANALYSIS COMPLETE - Extracted 62 characters
+2025-11-24 00:55:07,538 - sha_analyzer - INFO - Document Type: UNKNOWN
+2025-11-24 00:55:07,539 - sha_analyzer - INFO - Extraction Method: Fallback Processing
+2025-11-24 00:55:51,223 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 01:11:32,066 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 01:11:32,116 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 01:12:04,628 - sha_analyzer - INFO - Processing document: kiprotich summary.pdf
+2025-11-24 01:12:04,628 - sha_analyzer - INFO - Extracting text from document...
+2025-11-24 01:12:04,972 - sha_analyzer - INFO - Processing PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpprw61qna.pdf
+2025-11-24 01:12:05,312 - sha_analyzer - INFO - PDF appears to be scanned or handwritten, using OCR...
+2025-11-24 01:12:05,835 - sha_analyzer - INFO - Using pdf2image for PDF conversion
+2025-11-24 01:12:22,788 - sha_analyzer - WARNING - pdf2image failed: Unable to get page count.
+
+2025-11-24 01:12:24,061 - sha_analyzer - INFO - Using PyMuPDF for PDF conversion
+2025-11-24 01:12:25,811 - sha_analyzer - INFO - Successfully converted 1 pages using PyMuPDF
+2025-11-24 01:12:25,828 - sha_analyzer - INFO - OCR processing page 1/1...
+2025-11-24 01:12:25,828 - sha_analyzer - INFO - Trying OCR with Azure Computer Vision...
+2025-11-24 01:12:26,277 - sha_analyzer - ERROR - Azure Computer Vision OCR failed: HTTPSConnectionPool(host='your-resource-name.cognitiveservices.azure.com', port=443): Max retries exceeded with url: /vision/v2023-02-01-preview/read/analyze (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000021F07D9A720>: Failed to resolve 'your-resource-name.cognitiveservices.azure.com' ([Errno 11001] getaddrinfo failed)"))
+2025-11-24 01:12:26,582 - sha_analyzer - INFO - Trying OCR with OpenAI Vision...
+2025-11-24 01:12:41,284 - sha_analyzer - ERROR - OpenAI Vision OCR failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 01:12:43,788 - sha_analyzer - INFO - Trying OCR with Tesseract...
+2025-11-24 01:13:27,125 - sha_analyzer - WARNING - Tesseract config --oem 3 --psm 6 failed: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-11-24 01:13:27,125 - sha_analyzer - WARNING - Tesseract config --oem 3 --psm 4 failed: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-11-24 01:13:27,125 - sha_analyzer - WARNING - Tesseract config --oem 3 --psm 8 failed: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-11-24 01:13:27,144 - sha_analyzer - WARNING - Tesseract config --oem 3 --psm 13 failed: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-11-24 01:13:28,686 - sha_analyzer - ERROR - Tesseract OCR failed: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-11-24 01:13:28,686 - sha_analyzer - WARNING - Page 1 OCR failed
+2025-11-24 01:24:13,953 - sha_analyzer - INFO - Azure Computer Vision OCR is configured
+2025-11-24 01:24:13,953 - sha_analyzer - WARNING - Tesseract OCR not available
+2025-11-24 01:24:13,953 - sha_analyzer - INFO - Azure Computer Vision OCR is configured
+2025-11-24 01:24:13,953 - sha_analyzer - WARNING - Tesseract OCR not available
+2025-11-24 01:24:43,789 - sha_analyzer - INFO - Processing document: nyla njeru summary.pdf
+2025-11-24 01:24:44,039 - sha_analyzer - INFO - Extracting text from document...
+2025-11-24 01:24:44,193 - sha_analyzer - INFO - Processing PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmplduahn47.pdf
+2025-11-24 01:24:44,416 - sha_analyzer - INFO - PDF appears to be scanned or handwritten, using OCR...
+2025-11-24 01:24:44,679 - sha_analyzer - INFO - Using pdf2image for PDF conversion
+2025-11-24 01:24:53,792 - sha_analyzer - WARNING - pdf2image failed: Unable to get page count.
+
+2025-11-24 01:24:54,374 - sha_analyzer - INFO - Using PyMuPDF for PDF conversion
+2025-11-24 01:24:55,537 - sha_analyzer - INFO - Successfully converted 1 pages using PyMuPDF
+2025-11-24 01:24:55,537 - sha_analyzer - INFO - OCR processing page 1/1...
+2025-11-24 01:24:55,537 - sha_analyzer - INFO - Trying OCR with Azure Computer Vision...
+2025-11-24 01:24:55,900 - sha_analyzer - ERROR - Azure Computer Vision OCR failed: HTTPSConnectionPool(host='your-resource-name.cognitiveservices.azure.com', port=443): Max retries exceeded with url: /vision/v3.2/ocr?language=en&detectOrientation=true (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000278C04E7E90>: Failed to resolve 'your-resource-name.cognitiveservices.azure.com' ([Errno 11001] getaddrinfo failed)"))
+2025-11-24 01:24:55,900 - sha_analyzer - WARNING - Azure Computer Vision failed: HTTPSConnectionPool(host='your-resource-name.cognitiveservices.azure.com', port=443): Max retries exceeded with url: /vision/v3.2/ocr?language=en&detectOrientation=true (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000278C04E7E90>: Failed to resolve 'your-resource-name.cognitiveservices.azure.com' ([Errno 11001] getaddrinfo failed)"))
+2025-11-24 01:24:55,900 - sha_analyzer - INFO - Trying OCR with OpenAI Vision...
+2025-11-24 01:25:16,014 - sha_analyzer - INFO - OpenAI Vision successfully extracted 944 characters
+2025-11-24 01:25:16,014 - sha_analyzer - INFO - Page 1 OCR: 944 characters
+2025-11-24 01:25:16,014 - sha_analyzer - INFO - OCR completed: 1/1 pages successful
+2025-11-24 01:28:33,099 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 01:28:39,491 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 01:30:30,603 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 01:30:30,891 - sha_analyzer - INFO - Processing: joy wanja form.pdf
+2025-11-24 01:30:31,255 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmph018vp9i.pdf
+2025-11-24 01:30:31,391 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-24 01:30:32,666 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpykkuoy35.pdf
+2025-11-24 01:30:32,666 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-24 01:30:32,806 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-24 01:30:32,806 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-24 01:30:32,806 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-24 01:30:32,806 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-24 01:30:32,806 - sha_analyzer - INFO - Extraction Method: None
+2025-11-24 01:30:32,806 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 01:30:32,816 - sha_analyzer - INFO - Document saved to history with ID: 4
+2025-11-24 01:59:33,461 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 01:59:33,461 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 02:00:05,633 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 02:00:05,656 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 02:04:06,202 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 02:04:12,382 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 02:05:20,988 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 02:05:21,548 - sha_analyzer - INFO - Processing: virginia notes.pdf
+2025-11-24 02:05:22,479 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpjpggf88d.pdf
+2025-11-24 02:05:22,696 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-24 02:05:23,090 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpx38ea0un.pdf
+2025-11-24 02:05:23,324 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-24 02:05:23,841 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-24 02:05:23,950 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-24 02:05:23,963 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-24 02:05:24,302 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-24 02:05:24,311 - sha_analyzer - INFO - Extraction Method: None
+2025-11-24 02:05:24,312 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 02:05:24,313 - sha_analyzer - INFO - Document saved to history with ID: 5
+2025-11-24 02:07:47,130 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 02:07:47,161 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 02:07:49,124 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 02:07:49,146 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 02:18:54,912 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 02:19:01,922 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 02:21:05,459 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 02:21:06,260 - sha_analyzer - INFO - Processing: sarah karondo notes.pdf
+2025-11-24 02:21:06,587 - sha_analyzer - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmp582bx10f.pdf
+2025-11-24 02:21:06,603 - sha_analyzer - WARNING - File is not a valid PDF, attempting to process as image
+2025-11-24 02:21:07,394 - sha_analyzer - ERROR - Clinical pipeline error: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmp7a4hbqwx.pdf
+2025-11-24 02:21:07,394 - sha_analyzer - INFO - Running SHA Compliance Analysis with ML-based Handwritten Support...
+2025-11-24 02:21:07,493 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: HANDWRITTEN_DOCUMENT_ANALYSIS
+2025-11-24 02:21:07,552 - sha_analyzer - INFO - Document Type: POSSIBLE_HANDWRITTEN_CONTENT
+2025-11-24 02:21:07,552 - sha_analyzer - INFO - Extracted Characters: 49
+2025-11-24 02:21:07,552 - sha_analyzer - INFO - Handwritten Detected: True
+2025-11-24 02:21:07,552 - sha_analyzer - INFO - Extraction Method: None
+2025-11-24 02:21:07,552 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 02:21:07,552 - sha_analyzer - INFO - Document saved to history with ID: 6
+2025-11-24 04:10:16,752 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 04:10:23,356 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 04:32:07,124 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 04:32:07,186 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 04:33:47,043 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 04:35:08,968 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 04:35:09,400 - sha_analyzer - INFO - Processing: virginia notes.pdf
+2025-11-24 04:35:10,448 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 04:35:10,451 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 04:36:53,986 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 04:36:54,815 - sha_analyzer - INFO - Processing: virginia notes.pdf
+2025-11-24 04:36:55,140 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 04:36:55,146 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 04:42:34,445 - sha_analyzer - INFO - Received signal 2, shutting down...
+2025-11-24 04:42:34,445 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 04:42:34,445 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 04:42:34,502 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 04:42:34,502 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 04:42:39,874 - sha_analyzer - INFO - Received signal 2, shutting down...
+2025-11-24 04:42:40,950 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 04:42:41,949 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 04:42:44,193 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 04:42:44,193 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 05:03:11,675 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 05:03:17,797 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 05:04:05,799 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 05:04:06,147 - sha_analyzer - INFO - Processing: grace mwaniki  form.pdf
+2025-11-24 05:04:06,544 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 05:04:06,609 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 05:04:07,005 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-24 05:04:07,526 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-24 05:04:26,072 - sha_analyzer - WARNING - pdf2image failed: Unable to get page count.
+, falling back to pdfplumber
+2025-11-24 05:04:29,833 - sha_analyzer - INFO - Successfully converted page 1 using pdfplumber
+2025-11-24 05:04:31,418 - sha_analyzer - INFO - Successfully converted page 2 using pdfplumber
+2025-11-24 05:04:32,803 - sha_analyzer - INFO - Successfully converted page 3 using pdfplumber
+2025-11-24 05:04:33,618 - sha_analyzer - WARNING - Azure Computer Vision failed: HTTPSConnectionPool(host='your-resource-name.cognitiveservices.azure.com', port=443): Max retries exceeded with url: /vision/v2023-02-01-preview/ocr?language=en&detectOrientation=true (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000018423327620>: Failed to resolve 'your-resource-name.cognitiveservices.azure.com' ([Errno 11001] getaddrinfo failed)")), falling back to OpenAI Vision
+2025-11-24 05:04:45,010 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 05:04:45,025 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 05:04:46,467 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 05:04:46,482 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 05:04:47,347 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 05:04:47,347 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 05:04:47,551 - sha_analyzer - WARNING - Azure Computer Vision failed: HTTPSConnectionPool(host='your-resource-name.cognitiveservices.azure.com', port=443): Max retries exceeded with url: /vision/v2023-02-01-preview/ocr?language=en&detectOrientation=true (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000184249B5760>: Failed to resolve 'your-resource-name.cognitiveservices.azure.com' ([Errno 11001] getaddrinfo failed)")), falling back to OpenAI Vision
+2025-11-24 05:04:49,159 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 05:04:49,159 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 05:04:51,854 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 05:04:51,854 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 05:04:52,917 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 05:04:52,917 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 05:04:53,120 - sha_analyzer - WARNING - Azure Computer Vision failed: HTTPSConnectionPool(host='your-resource-name.cognitiveservices.azure.com', port=443): Max retries exceeded with url: /vision/v2023-02-01-preview/ocr?language=en&detectOrientation=true (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000184249B42C0>: Failed to resolve 'your-resource-name.cognitiveservices.azure.com' ([Errno 11001] getaddrinfo failed)")), falling back to OpenAI Vision
+2025-11-24 05:04:54,664 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 05:04:54,664 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 05:04:55,128 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 05:04:55,144 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 05:04:56,275 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 05:04:56,275 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 05:04:56,312 - sha_analyzer - INFO - Running SHA Compliance Analysis...
+2025-11-24 05:04:57,126 - sha_analyzer - ERROR - AI Compliance Analysis Error: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-11-24 05:05:08,381 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: ANALYSIS_UNAVAILABLE
+2025-11-24 05:05:08,425 - sha_analyzer - INFO - Document Type: DIGITAL_DOCUMENT
+2025-11-24 05:05:08,425 - sha_analyzer - INFO - File Type: PDF
+2025-11-24 05:05:08,510 - sha_analyzer - INFO - Extracted Characters: 837
+2025-11-24 05:05:08,644 - sha_analyzer - INFO - Extraction Method: PDF Processing
+2025-11-24 05:05:08,650 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 05:05:08,666 - sha_analyzer - INFO - Document saved to history with ID: 7
+2025-11-24 08:49:22,465 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 08:49:29,193 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 09:24:16,661 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 09:24:17,416 - sha_analyzer - INFO - Processing: virginia notes.pdf
+2025-11-24 09:24:18,097 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 09:24:18,097 - sha_analyzer - INFO - Azure Computer Vision is configured and available
+2025-11-24 09:24:20,026 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-24 09:24:20,611 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-24 09:24:44,949 - sha_analyzer - WARNING - pdf2image failed: Unable to get page count.
+, falling back to pdfplumber
+2025-11-24 09:24:50,279 - sha_analyzer - INFO - Successfully converted page 1 using pdfplumber
+2025-11-24 09:24:53,228 - sha_analyzer - INFO - Successfully converted page 2 using pdfplumber
+2025-11-24 09:24:56,181 - sha_analyzer - INFO - Successfully converted page 3 using pdfplumber
+2025-11-24 09:24:59,016 - sha_analyzer - INFO - Successfully converted page 4 using pdfplumber
+2025-11-24 09:25:01,358 - sha_analyzer - INFO - Successfully converted page 5 using pdfplumber
+2025-11-24 09:25:03,339 - sha_analyzer - INFO - Successfully converted page 6 using pdfplumber
+2025-11-24 09:25:05,386 - sha_analyzer - INFO - Successfully converted page 7 using pdfplumber
+2025-11-24 09:25:07,451 - sha_analyzer - INFO - Successfully converted page 8 using pdfplumber
+2025-11-24 09:25:09,457 - sha_analyzer - INFO - Successfully converted page 9 using pdfplumber
+2025-11-24 09:25:12,751 - sha_analyzer - INFO - Successfully converted page 10 using pdfplumber
+2025-11-24 09:25:15,647 - sha_analyzer - INFO - Successfully converted page 11 using pdfplumber
+2025-11-24 09:25:18,462 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:25:37,060 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:25:37,068 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:25:38,561 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:25:38,561 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:25:41,082 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:25:41,156 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:25:41,495 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:25:44,187 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:25:44,391 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:25:45,316 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:25:45,401 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:25:47,105 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:25:47,105 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:25:47,547 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:25:51,115 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:25:51,598 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:25:52,871 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:25:52,876 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:25:54,427 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:25:54,435 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:25:55,586 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:25:59,541 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:25:59,544 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:01,077 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:01,081 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:02,105 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:02,105 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:02,176 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:26:03,347 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:03,356 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:04,412 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:04,412 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:05,241 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:05,241 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:05,346 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:26:06,737 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:06,737 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:07,655 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:07,655 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:08,609 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:08,609 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:08,675 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:26:10,296 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:10,296 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:11,315 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:11,322 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:12,722 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:12,722 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:12,800 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:26:13,766 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:13,766 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:14,585 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:14,592 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:15,433 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:15,435 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:15,547 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:26:16,836 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:16,836 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:17,686 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:17,689 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:18,747 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:18,747 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:18,839 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:26:19,817 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:19,817 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:20,885 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:20,885 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:21,560 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:21,565 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:21,690 - sha_analyzer - WARNING - Azure Computer Vision failed: Invalid URL 'your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr': No scheme supplied. Perhaps you meant https://your_azure_cv_endpoint/vision/v2023-02-01-preview/ocr?, falling back to OpenAI Vision
+2025-11-24 09:26:22,660 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:22,667 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 09:26:23,318 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:23,318 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 09:26:24,425 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 09:26:24,425 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 09:26:24,546 - sha_analyzer - INFO - Running SHA Compliance Analysis...
+2025-11-24 09:26:24,952 - sha_analyzer - ERROR - AI Compliance Analysis Error: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-11-24 09:26:35,105 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: ANALYSIS_UNAVAILABLE
+2025-11-24 09:26:35,105 - sha_analyzer - INFO - Document Type: DIGITAL_DOCUMENT
+2025-11-24 09:26:35,115 - sha_analyzer - INFO - File Type: PDF
+2025-11-24 09:26:35,115 - sha_analyzer - INFO - Extracted Characters: 3023
+2025-11-24 09:26:35,132 - sha_analyzer - INFO - Extraction Method: PDF Processing
+2025-11-24 09:26:35,135 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 09:26:35,135 - sha_analyzer - INFO - Document saved to history with ID: 8
+2025-11-24 10:39:27,677 - sha_analyzer - WARNING - Google Document AI is not configured. Using fallback OCR methods.
+2025-11-24 10:39:44,185 - sha_analyzer - WARNING - Google Document AI is not configured. Using fallback OCR methods.
+2025-11-24 10:42:30,704 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 10:42:31,244 - sha_analyzer - INFO - Processing: virginia notes.pdf
+2025-11-24 10:42:32,316 - sha_analyzer - WARNING - Google Document AI is not configured. Using fallback OCR methods.
+2025-11-24 10:42:32,320 - sha_analyzer - WARNING - Google Document AI is not configured. Using fallback OCR methods.
+2025-11-24 10:42:33,357 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-24 10:42:34,513 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-24 10:43:04,361 - sha_analyzer - WARNING - pdf2image failed: Unable to get page count.
+, falling back to pdfplumber
+2025-11-24 10:43:13,440 - sha_analyzer - INFO - Successfully converted page 1 using pdfplumber
+2025-11-24 10:43:18,530 - sha_analyzer - INFO - Successfully converted page 2 using pdfplumber
+2025-11-24 10:43:22,060 - sha_analyzer - INFO - Successfully converted page 3 using pdfplumber
+2025-11-24 10:43:23,614 - sha_analyzer - INFO - Successfully converted page 4 using pdfplumber
+2025-11-24 10:43:25,690 - sha_analyzer - INFO - Successfully converted page 5 using pdfplumber
+2025-11-24 10:43:30,861 - sha_analyzer - INFO - Successfully converted page 6 using pdfplumber
+2025-11-24 10:43:31,867 - sha_analyzer - INFO - Successfully converted page 7 using pdfplumber
+2025-11-24 10:43:34,710 - sha_analyzer - INFO - Successfully converted page 8 using pdfplumber
+2025-11-24 10:43:36,088 - sha_analyzer - INFO - Successfully converted page 9 using pdfplumber
+2025-11-24 10:43:37,820 - sha_analyzer - INFO - Successfully converted page 10 using pdfplumber
+2025-11-24 10:43:39,925 - sha_analyzer - INFO - Successfully converted page 11 using pdfplumber
+2025-11-24 10:44:03,520 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:03,520 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:04,706 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:04,713 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:06,018 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:06,020 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:07,277 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:07,277 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:08,573 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:08,573 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:09,973 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:09,973 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:12,134 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:12,134 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:14,085 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:14,085 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:15,625 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:15,629 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:17,153 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:17,153 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:18,176 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:18,176 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:19,200 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:19,200 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:20,480 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:20,480 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:21,700 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:21,706 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:22,730 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:22,730 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:23,682 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:23,690 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:24,570 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:24,570 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:25,400 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:25,400 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:26,472 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:26,472 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:27,302 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:27,562 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:28,590 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:28,596 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:29,690 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:29,690 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:30,980 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:31,005 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:32,323 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:32,328 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:34,561 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:34,561 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:35,745 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:35,750 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:37,030 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:37,036 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:38,100 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:38,105 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:38,792 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:38,792 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:39,411 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:39,490 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:42,840 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:42,841 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 10:44:43,520 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:43,520 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 10:44:44,246 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 10:44:44,358 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 10:44:44,525 - sha_analyzer - INFO - Running SHA Compliance Analysis...
+2025-11-24 10:44:45,020 - sha_analyzer - ERROR - AI Compliance Analysis Error: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-11-24 10:44:54,275 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 40/100 - Status: ANALYSIS_UNAVAILABLE
+2025-11-24 10:44:54,275 - sha_analyzer - INFO - Document Type: DIGITAL_DOCUMENT
+2025-11-24 10:44:54,275 - sha_analyzer - INFO - File Type: PDF
+2025-11-24 10:44:54,275 - sha_analyzer - INFO - Extracted Characters: 3023
+2025-11-24 10:44:54,280 - sha_analyzer - INFO - Extraction Method: PDF Processing
+2025-11-24 10:44:54,280 - sha_analyzer - INFO - Fields Detected: []
+2025-11-24 10:44:54,280 - sha_analyzer - INFO - Document saved to history with ID: 9
+2025-11-24 11:39:12,575 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-24 11:39:17,467 - sha_analyzer - INFO - Processing: joy wanja form.pdf
+2025-11-24 11:39:18,726 - sha_analyzer - WARNING - Google Document AI is not configured. Using fallback OCR methods.
+2025-11-24 11:39:18,925 - sha_analyzer - WARNING - Google Document AI is not configured. Using fallback OCR methods.
+2025-11-24 11:39:22,549 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-24 11:39:22,838 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-24 11:39:52,144 - sha_analyzer - WARNING - pdf2image failed: Unable to get page count.
+, falling back to pdfplumber
+2025-11-24 11:39:57,941 - sha_analyzer - INFO - Successfully converted page 1 using pdfplumber
+2025-11-24 11:40:01,097 - sha_analyzer - INFO - Successfully converted page 2 using pdfplumber
+2025-11-24 11:40:04,728 - sha_analyzer - INFO - Successfully converted page 3 using pdfplumber
+2025-11-24 11:40:12,867 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 11:40:13,111 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 11:40:14,334 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 11:40:14,334 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 11:40:15,862 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 11:40:15,870 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 11:40:17,926 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 11:40:17,926 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 11:40:18,877 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 11:40:18,877 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 11:40:19,772 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 11:40:19,772 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 11:40:22,556 - sha_analyzer - WARNING - Primary vision model failed: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 11:40:22,560 - sha_analyzer - INFO - Trying fallback model: gpt-4
+2025-11-24 11:40:23,568 - sha_analyzer - WARNING - Fallback model gpt-4 failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 11:40:23,576 - sha_analyzer - INFO - Trying fallback model: gpt-3.5-turbo
+2025-11-24 11:40:25,206 - sha_analyzer - WARNING - Fallback model gpt-3.5-turbo failed: Error code: 400 - {'error': {'message': 'Invalid content type. image_url is only supported by certain models.', 'type': 'invalid_request_error', 'param': 'messages.[0].content.[1].type', 'code': None}}
+2025-11-24 11:40:25,206 - sha_analyzer - ERROR - ML text extraction error: Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-11-24 12:28:17,706 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 12:28:18,553 - sha_analyzer - INFO - Cleanup complete.
+2025-11-24 12:31:21,178 - sha_analyzer - INFO - Cleaning up resources...
+2025-11-24 12:31:22,663 - sha_analyzer - INFO - Cleanup complete.
+2025-11-25 10:19:04,729 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-25 10:19:05,163 - sha_analyzer - INFO - Processing: virginia notes.pdf
+2025-11-25 10:19:06,687 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-25 10:19:07,129 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-25 10:19:25,786 - sha_analyzer - INFO - Successfully converted 11 pages using pdf2image
+2025-11-25 10:20:48,225 - sha_analyzer - INFO - Running SHA Compliance Analysis...
+2025-11-25 10:21:05,322 - sha_analyzer - ERROR - AI Compliance Analysis Error: Expecting value: line 1 column 1 (char 0)
+2025-11-25 10:21:05,472 - sha_analyzer - ERROR - SHA ANALYSIS ERROR: name 'text_content' is not defined
+2025-11-25 11:09:10,937 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-25 11:09:11,118 - sha_analyzer - INFO - Processing: nyla njeru summary.pdf
+2025-11-25 11:09:11,651 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-25 11:09:11,826 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-25 11:09:18,496 - sha_analyzer - INFO - Successfully converted 1 pages using pdf2image
+2025-11-25 11:09:27,591 - sha_analyzer - INFO - Running SHA Compliance Analysis...
+2025-11-25 11:09:58,989 - sha_analyzer - ERROR - Mistral API timeout error
+2025-11-25 11:09:58,989 - sha_analyzer - ERROR - Mistral AI compliance analysis error: Mistral API timeout error
+2025-11-25 11:09:58,989 - sha_analyzer - ERROR - SHA ANALYSIS ERROR: cannot access local variable 'extracted_fields' where it is not associated with a value
+2025-11-25 11:31:34,362 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-25 11:31:34,906 - sha_analyzer - INFO - Processing: nyla njeru summary.pdf
+2025-11-25 11:31:35,299 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-25 11:31:35,601 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-25 11:31:38,872 - sha_analyzer - INFO - Successfully converted 1 pages using pdf2image
+2025-11-25 11:31:47,156 - sha_analyzer - INFO - Running SHA Compliance Analysis...
+2025-11-25 11:32:06,686 - sha_analyzer - ERROR - AI Compliance Analysis Error: Expecting value: line 1 column 1 (char 0)
+2025-11-25 11:32:16,502 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 78/100 - Status: ANALYSIS_UNAVAILABLE
+2025-11-25 11:32:16,502 - sha_analyzer - INFO - Document Type: DIGITAL_DOCUMENT
+2025-11-25 11:32:16,518 - sha_analyzer - INFO - File Type: PDF
+2025-11-25 11:32:16,518 - sha_analyzer - INFO - Extracted Characters: 1102
+2025-11-25 11:32:16,518 - sha_analyzer - INFO - Extraction Method: PDF OCR
+2025-11-25 11:32:16,518 - sha_analyzer - INFO - Fields Detected: ['patient_name', 'date_of_birth', 'facility', 'service_dates']
+2025-11-25 11:38:06,698 - sha_analyzer - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-25 11:38:06,934 - sha_analyzer - INFO - Processing: nyla njeru summary.pdf
+2025-11-25 11:38:07,334 - sha_analyzer - INFO - Direct PDF text extraction insufficient, trying OCR
+2025-11-25 11:38:07,337 - sha_analyzer - INFO - Using pdf2image for PDF to image conversion
+2025-11-25 11:38:10,675 - sha_analyzer - INFO - Successfully converted 1 pages using pdf2image
+2025-11-25 11:38:22,187 - sha_analyzer - INFO - Running SHA Compliance Analysis...
+2025-11-25 11:38:39,154 - sha_analyzer - ERROR - AI Compliance Analysis Error: Expecting value: line 1 column 1 (char 0)
+2025-11-25 11:38:52,413 - sha_analyzer - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 78/100 - Status: ANALYSIS_UNAVAILABLE
+2025-11-25 11:38:52,413 - sha_analyzer - INFO - Document Type: DIGITAL_DOCUMENT
+2025-11-25 11:38:52,413 - sha_analyzer - INFO - File Type: PDF
+2025-11-25 11:38:52,445 - sha_analyzer - INFO - Extracted Characters: 1102
+2025-11-25 11:38:52,448 - sha_analyzer - INFO - Extraction Method: PDF OCR
+2025-11-25 11:38:52,449 - sha_analyzer - INFO - Fields Detected: ['patient_id', 'date_of_birth', 'facility', 'service_dates']

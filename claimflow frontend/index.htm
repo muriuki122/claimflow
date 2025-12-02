@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAIM FLOW - Healthcare Document Analysis</title>
+    
+    <!-- React and Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- PDF.js for PDF rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+            --success-gradient: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            --warning-gradient: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            --danger-gradient: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .glass-morphism {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-large);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(79, 70, 229, 0.8);
+            }
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.6s ease-out;
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        .gradient-animated {
+            background: var(--primary-gradient);
+            background-size: 200% 200%;
+            animation: gradient-shift 3s ease infinite;
+        }
+        
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-large);
+        }
+        
+        .card-elevated {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow-large);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-elevated::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+        
+        .card-elevated:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .status-badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .status-badge-success {
+            background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+            color: #065F46;
+        }
+        
+        .status-badge-warning {
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+            color: #92400E;
+        }
+        
+        .status-badge-danger {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+            color: #991B1B;
+        }
+        
+        .icon-gradient {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-circle:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .table-modern {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .table-modern thead {
+            background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+        }
+        
+        .table-modern tbody tr {
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #F3F4F6;
+        }
+        
+        .table-modern tbody tr:hover {
+            background: linear-gradient(90deg, #F9FAFB, #FFFFFF);
+            transform: scale(1.01);
+        }
+        
+        .loading-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+        
+        .loading-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        
+        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .text-preview {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 16px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .highlight-success {
+            background-color: #d4edda;
+        }
+        
+        .highlight-danger {
+            background-color: #f8d7da;
+        }
+        
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f5c6cb;
+        }
+        
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c3e6cb;
+        }
+        
+        .code-tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.875rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            box-shadow: var(--shadow-large);
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: auto;
+            background-color: #f9fafb;
+        }
+        
+        .pdf-page {
+            margin: 10px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .progress-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .progress-step.active {
+            transform: translateX(5px);
+        }
+        
+        .progress-step-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .progress-step-text {
+            flex: 1;
+        }
+        
+        .progress-percentage {
+            font-weight: bold;
+            color: #4F46E5;
+            min-width: 45px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        
+        // API endpoint - No JWT authentication required
+        const API_URL = 'http://localhost:5000';
+        
+        // Enhanced PDF Validation Function
+        const validatePDF = (file) => {
+            return new Promise((resolve, reject) => {
+                console.log('🔍 Validating PDF file:', file.name, file.size, file.type);
+                
+                // Check file type
+                if (file.type !== 'application/pdf') {
+                    reject('❌ Please select a PDF file. Your file type: ' + file.type);
+                    return;
+                }
+                
+                // Check file size (max 10MB)
+                if (file.size > 10 * 1024 * 1024) {
+                    reject('❌ File size must be less than 10MB. Your file: ' + (file.size / 1024 / 1024).toFixed(2) + 'MB');
+                    return;
+                }
+                
+                // Check if file is empty
+                if (file.size === 0) {
+                    reject('❌ File is empty. Please select a valid PDF file.');
+                    return;
+                }
+                
+                // Read first 1024 bytes to check PDF signature and structure
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const arr = new Uint8Array(e.target.result);
+                        
+                        // Check PDF header (first 4 bytes should be %PDF)
+                        const header = Array.from(arr.slice(0, 4))
+                            .map(b => String.fromCharCode(b))
+                            .join('');
+                        
+                        console.log('📄 PDF header:', header);
+                        
+                        if (header !== '%PDF') {
+                            reject('❌ Invalid PDF file. This file may be corrupted or not a PDF.');
+                            return;
+                        }
+                        
+                        // Check for PDF structure indicators
+                        const fullContent = new TextDecoder().decode(arr);
+                        const hasPDFStructure = 
+                            fullContent.includes('obj') && 
+                            fullContent.includes('endobj') &&
+                            (fullContent.includes('/Pages') || fullContent.includes('/Catalog'));
+                        
+                        console.log('🏗️ PDF structure check:', { 
+                            hasObjects: fullContent.includes('obj'),
+                            hasEndObjects: fullContent.includes('endobj'),
+                            hasCatalog: fullContent.includes('/Catalog') || fullContent.includes('/Pages')
+                        });
+                        
+                        if (!hasPDFStructure) {
+                            reject('⚠️ PDF appears to be corrupted or incomplete. Please try a different file.');
+                            return;
+                        }
+                        
+                        console.log('✅ PDF validation passed');
+                        resolve(true);
+                        
+                    } catch (error) {
+                        console.error('❌ PDF validation error:', error);
+                        reject('❌ Error reading PDF file. File may be corrupted.');
+                    }
+                };
+                
+                reader.onerror = function() {
+                    reject('❌ Error reading file. Please try again.');
+                };
+                
+                // Read first 1024 bytes for comprehensive validation
+                const blob = file.slice(0, 1024);
+                reader.readAsArrayBuffer(blob);
+            });
+        };
+
+        // Export functionality
+        const exportToPDF = (analysisResult) => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Add title
+            doc.setFontSize(20);
+            doc.text('SHA Compliance Analysis Report', 20, 20);
+            
+            // Add date
+            doc.setFontSize(12);
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 20, 30);
+            
+            // Add patient information
+            doc.setFontSize(16);
+            doc.text('Patient Information', 20, 45);
+            doc.setFontSize(12);
+            
+            let yPosition = 55;
+            const patientInfo = [
+                `Name: ${analysisResult.patientName || 'Not specified'}`,
+                `ID: ${analysisResult.patientId || 'Not specified'}`,
+                `Facility: ${analysisResult.facility || 'Not specified'}`,
+                `Physician: ${analysisResult.physicianName || 'Not specified'}`,
+                `Diagnosis: ${analysisResult.diagnosis || 'Not specified'}`,
+                `Service Dates: ${analysisResult.serviceDates || 'Not specified'}`
+            ];
+            
+            patientInfo.forEach(info => {
+                doc.text(info, 20, yPosition);
+                yPosition += 10;
+            });
+            
+            // Add compliance analysis
+            yPosition += 10;
+            doc.setFontSize(16);
+            doc.text('Compliance Analysis', 20, yPosition);
+            yPosition += 10;
+            doc.setFontSize(12);
+            doc.text(`Compliance Score: ${analysisResult.complianceScore || 0}%`, 20, yPosition);
+            yPosition += 10;
+            doc.text(`Approval Status: ${analysisResult.approvalStatus || 'Unknown'}`, 20, yPosition);
+            yPosition += 10;
+            doc.text(`Risk Assessment: ${analysisResult.riskAssessment || 'Unknown'}`, 20, yPosition);
+            
+            // Add missing requirements
+            if (analysisResult.missingRequirements && analysisResult.missingRequirements.length > 0) {
+                yPosition += 15;
+                doc.setFontSize(16);
+                doc.text('Missing Requirements', 20, yPosition);
+                yPosition += 10;
+                doc.setFontSize(12);
+                
+                analysisResult.missingRequirements.forEach(req => {
+                    if (yPosition > 270) {
+                        doc.addPage();
+                        yPosition = 20;
+                    }
+                    doc.text(`• ${req}`, 25, yPosition);
+                    yPosition += 10;
+                });
+            }
+            
+            // Add recommendations
+            if (analysisResult.recommendations && analysisResult.recommendations.length > 0) {
+                yPosition += 15;
+                doc.setFontSize(16);
+                doc.text('Recommendations', 20, yPosition);
+                yPosition += 10;
+                doc.setFontSize(12);
+                
+                analysisResult.recommendations.forEach(rec => {
+                    if (yPosition > 270) {
+                        doc.addPage();
+                        yPosition = 20;
+                    }
+                    const lines = doc.splitTextToSize(rec, 170);
+                    lines.forEach(line => {
+                        doc.text(`• ${line}`, 25, yPosition);
+                        yPosition += 7;
+                    });
+                    yPosition += 3;
+                });
+            }
+            
+            // Save the PDF
+            doc.save(`SHA_Analysis_Report_${analysisResult.patientName || 'Patient'}_${new Date().toISOString().split('T')[0]}.pdf`);
+        };
+
+        // Main App Component
+        function App() {
+            const [currentPage, setCurrentPage] = useState('welcome');
+            const [uploadedFile, setUploadedFile] = useState(null);
+            const [extractedText, setExtractedText] = useState('');
+            const [analysisResult, setAnalysisResult] = useState(null);
+            const [isAnalyzing, setIsAnalyzing] = useState(false);
+            const [analysisHistory, setAnalysisHistory] = useState([]);
+            const [extractionProgress, setExtractionProgress] = useState(0);
+            const [apiError, setApiError] = useState(null);
+            const [connectionStatus, setConnectionStatus] = useState('checking');
+            const [validationError, setValidationError] = useState(null);
+            const [selectedHistoryItem, setSelectedHistoryItem] = useState(null);
+            const [showHistoryModal, setShowHistoryModal] = useState(false);
+            const [showDocumentModal, setShowDocumentModal] = useState(false);
+            const [documentUrl, setDocumentUrl] = useState(null);
+            
+            // Check backend connection on component mount
+            useEffect(() => {
+                checkBackendConnection();
+            }, []);
+            
+            const checkBackendConnection = async () => {
+                try {
+                    console.log('🔌 Checking backend connection to:', `${API_URL}/api/health`);
+                    const response = await fetch(`${API_URL}/api/health`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log('✅ Backend connection successful:', data);
+                        setConnectionStatus('connected');
+                    } else {
+                        console.error('❌ Backend health check failed:', response.status);
+                        setConnectionStatus('error');
+                    }
+                } catch (error) {
+                    console.error('❌ Backend connection failed:', error);
+                    setConnectionStatus('error');
+                    setApiError('Cannot connect to backend server. Please ensure it is running on port 5000.');
+                }
+            };
+            
+            // Load analysis history from localStorage
+            useEffect(() => {
+                const savedHistory = localStorage.getItem('analysisHistory');
+                if (savedHistory) {
+                    setAnalysisHistory(JSON.parse(savedHistory));
+                }
+            }, []);
+            
+            // Save analysis history to localStorage
+            useEffect(() => {
+                if (analysisHistory.length > 0) {
+                    localStorage.setItem('analysisHistory', JSON.stringify(analysisHistory));
+                }
+            }, [analysisHistory]);
+            
+            const handleFileUpload = async (file) => {
+                setValidationError(null);
+                setApiError(null);
+                
+                try {
+                    console.log('🔄 Starting PDF validation...');
+                    await validatePDF(file);
+                    console.log('✅ PDF validation successful');
+                    setUploadedFile(file);
+                    setCurrentPage('upload');
+                } catch (error) {
+                    console.error('❌ PDF validation failed:', error);
+                    setValidationError(error);
+                    setUploadedFile(null);
+                }
+            };
+            
+            const handleAnalyze = async () => {
+                if (!uploadedFile) return;
+                
+                setIsAnalyzing(true);
+                setCurrentPage('analyzing');
+                setExtractionProgress(0);
+                setApiError(null);
+                setValidationError(null);
+                
+                try {
+                    // Create form data for file upload
+                    const formData = new FormData();
+                    formData.append('file', uploadedFile);
+                    
+                    // Simulate progress updates (5% increments)
+                    const progressInterval = setInterval(() => {
+                        setExtractionProgress(prev => {
+                            if (prev >= 95) {
+                                clearInterval(progressInterval);
+                                return 95;
+                            }
+                            return prev + 5;
+                        });
+                    }, 500);
+                    
+                    console.log('📤 Sending request to backend...', `${API_URL}/api/upload`);
+                    
+                    // Call the backend API WITHOUT JWT authentication
+                    const response = await fetch(`${API_URL}/api/upload`, {
+                        method: 'POST',
+                        body: formData,
+                        // No authentication headers - backend should handle public access
+                        headers: {
+                            'Accept': 'application/json',
+                        }
+                    });
+                    
+                    console.log('📥 Response status:', response.status);
+                    
+                    if (!response.ok) {
+                        let errorMessage = `Server error: ${response.status}`;
+                        try {
+                            const errorData = await response.json();
+                            errorMessage = errorData.error || errorMessage;
+                        } catch (e) {
+                            // If response is not JSON, get text
+                            const text = await response.text();
+                            if (text) {
+                                errorMessage = `Server returned: ${text.substring(0, 100)}`;
+                            }
+                        }
+                        throw new Error(errorMessage);
+                    }
+                    
+                    // Check if response is JSON
+                    const contentType = response.headers.get('content-type');
+                    if (!contentType || !contentType.includes('application/json')) {
+                        const text = await response.text();
+                        console.error('Non-JSON response:', text.substring(0, 200));
+                        throw new Error('Server returned non-JSON response. Please check if the backend is running correctly.');
+                    }
+                    
+                    // Get the analysis results
+                    const analysis = await response.json();
+                    console.log('📊 Analysis result received:', analysis);
+                    
+                    // Update state with results
+                    setAnalysisResult(analysis);
+                    setExtractedText(analysis.extracted_text_preview || '');
+                    
+                    // Add to history if successful
+                    if (analysis.success !== false) {
+                        // Create a comprehensive history item with all necessary data
+                        const historyItem = {
+                            id: Date.now(), // Unique ID for each history item
+                            timestamp: new Date().toISOString(),
+                            filename: uploadedFile.name,
+                            // Store the complete analysis result for viewing later
+                            fullAnalysis: analysis,
+                            // Store the file data for document viewing
+                            fileData: URL.createObjectURL(uploadedFile),
+                            // Extract key information for display in the history table
+                            patientName: analysis.extracted_information?.patient_name || "Unknown Patient",
+                            patientId: analysis.extracted_information?.patient_id || "Unknown ID",
+                            documentType: "SHA Healthcare Document",
+                            submissionDate: new Date().toLocaleDateString(),
+                            approvalRate: analysis.document_analysis?.approval_rate || analysis.compliance_analysis?.COMPLIANCE_SCORE || 0,
+                            isApproved: analysis.document_analysis?.approval_status === "APPROVED" || 
+                                        analysis.compliance_analysis?.STATUS === "COMPLIANT",
+                            // Store extracted text for viewing
+                            extractedText: analysis.extracted_text_preview || "",
+                            // Store compliance data
+                            complianceData: analysis.compliance_analysis || {},
+                            // Store recommendations
+                            recommendations: analysis.approval_recommendations || ""
+                        };
+                        
+                        setAnalysisHistory(prev => [historyItem, ...prev.slice(0, 9)]); // Keep last 10 items
+                    }
+                    
+                    clearInterval(progressInterval);
+                    setExtractionProgress(100);
+                    setIsAnalyzing(false);
+                    setCurrentPage('results');
+                    
+                } catch (error) {
+                    console.error("❌ Error analyzing document:", error);
+                    setIsAnalyzing(false);
+                    
+                    // Provide user-friendly error messages
+                    if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+                        setApiError('Cannot connect to the backend server. Please ensure the Flask server is running and CORS is properly configured.');
+                    } else {
+                        setApiError(error.message || 'An unexpected error occurred during analysis.');
+                    }
+                    
+                    setCurrentPage('upload');
+                }
+            };
+            
+            // Function to view a history item
+            const handleViewHistoryItem = (item) => {
+                setSelectedHistoryItem(item);
+                setShowHistoryModal(true);
+            };
+            
+            // Function to view the original document
+            const handleViewDocument = (item) => {
+                setDocumentUrl(item.fileData);
+                setShowDocumentModal(true);
+            };
+            
+            // Function to export a history item
+            const handleExportHistoryItem = (item) => {
+                // Create a formatted result object from the history item
+                const result = {
+                    patientName: item.patientName,
+                    patientId: item.patientId,
+                    facility: item.fullAnalysis?.extracted_information?.facility || "Not specified",
+                    physicianName: item.fullAnalysis?.extracted_information?.physician_name || "Not specified",
+                    diagnosis: item.fullAnalysis?.extracted_information?.diagnosis || "Not specified",
+                    serviceDates: item.fullAnalysis?.extracted_information?.service_dates || "Not specified",
+                    complianceScore: item.complianceData?.COMPLIANCE_SCORE || 0,
+                    approvalStatus: item.complianceData?.STATUS || "Unknown",
+                    riskAssessment: item.fullAnalysis?.document_analysis?.risk_assessment || "Unknown",
+                    missingRequirements: item.complianceData?.MISSING_REQUIREMENTS || [],
+                    recommendations: item.complianceData?.RECOMMENDATIONS || []
+                };
+                
+                exportToPDF(result);
+            };
+            
+            return (
+                <div className="min-h-screen relative z-10">
+                    {/* Connection Status Banner */}
+                    {connectionStatus === 'error' && (
+                        <div className="bg-red-500 text-white py-2 px-4 text-center">
+                            <i className="fas fa-exclamation-triangle mr-2"></i>
+                            Cannot connect to backend server. Please make sure the Flask server is running on port 5000.
+                            {apiError && <div className="text-sm mt-1">{apiError}</div>}
+                        </div>
+                    )}
+                    
+                    {/* Enhanced Navigation Header */}
+                    <header className="glass-morphism sticky top-0 z-50">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="flex justify-between items-center h-20">
+                                <div className="flex items-center space-x-4">
+                                    <div className="icon-circle gradient-animated text-white">
+                                        <i className="fas fa-file-medical"></i>
+                                    </div>
+                                    <div>
+                                        <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                            CLAIM FLOW
+                                        </h1>
+                                        <p className="text-xs text-gray-600">Healthcare Document Intelligence</p>
+                                    </div>
+                                </div>
+                                <nav className="hidden md:flex space-x-8">
+                                    {['welcome', 'history'].map((page) => (
+                                        <button 
+                                            key={page}
+                                            onClick={() => setCurrentPage(page)}
+                                            className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                                                currentPage === page 
+                                                    ? 'text-indigo-600' 
+                                                    : 'text-gray-600 hover:text-indigo-600'
+                                            }`}
+                                        >
+                                            {page.charAt(0).toUpperCase() + page.slice(1)}
+                                            {currentPage === page && (
+                                                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"></span>
+                                            )}
+                                        </button>
+                                    ))}
+                                </nav>
+                                <div className="flex items-center space-x-4">
+                                    <div className="text-right">
+                                        <p className="text-sm font-semibold text-gray-800">MARY HELP</p>
+                                        <p className="text-xs text-gray-600">AI.validator</p>
+                                    </div>
+                                    <div className="w-12 h-12 rounded-full gradient-animated flex items-center justify-center text-white font-bold shadow-lg">
+                                        C.F
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    {/* Main Content */}
+                    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                        {currentPage === 'welcome' && (
+                            <WelcomePage 
+                                onFileUpload={handleFileUpload} 
+                                connectionStatus={connectionStatus} 
+                                validationError={validationError}
+                            />
+                        )}
+                        {currentPage === 'upload' && (
+                            <UploadPage 
+                                file={uploadedFile} 
+                                onFileChange={setUploadedFile} 
+                                onAnalyze={handleAnalyze}
+                                apiError={apiError}
+                                connectionStatus={connectionStatus}
+                                validationError={validationError}
+                            />
+                        )}
+                        {currentPage === 'analyzing' && <AnalyzingPage progress={extractionProgress} />}
+                        {currentPage === 'results' && (
+                            <ResultsPage 
+                                result={analysisResult} 
+                                extractedText={extractedText} 
+                                onNewAnalysis={() => setCurrentPage('upload')} 
+                            />
+                        )}
+                        {currentPage === 'history' && (
+                            <HistoryPage 
+                                history={analysisHistory} 
+                                onViewItem={handleViewHistoryItem}
+                                onViewDocument={handleViewDocument}
+                                onExportItem={handleExportHistoryItem}
+                            />
+                        )}
+                    </main>
+                    
+                    {/* History Modal */}
+                    {showHistoryModal && selectedHistoryItem && (
+                        <div className="modal-overlay">
+                            <div className="modal-content p-8">
+                                <div className="flex justify-between items-center mb-6">
+                                    <h2 className="text-2xl font-bold text-gray-900">Historical Analysis Details</h2>
+                                    <button 
+                                        onClick={() => setShowHistoryModal(false)}
+                                        className="text-gray-500 hover:text-gray-700"
+                                    >
+                                        <i className="fas fa-times text-xl"></i>
+                                    </button>
+                                </div>
+                                
+                                <div className="mb-6">
+                                    <div className="flex items-center space-x-4 mb-4">
+                                        <div className="icon-circle bg-indigo-100 text-indigo-600">
+                                            <i className="fas fa-file-medical"></i>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900">{selectedHistoryItem.filename}</h3>
+                                            <p className="text-sm text-gray-600">Analyzed on {new Date(selectedHistoryItem.timestamp).toLocaleDateString()}</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                                        <h4 className="font-bold text-gray-900 mb-2">Patient Information</h4>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <span className="text-sm text-gray-600">Name:</span>
+                                                <p className="font-medium">{selectedHistoryItem.patientName}</p>
+                                            </div>
+                                            <div>
+                                                <span className="text-sm text-gray-600">ID:</span>
+                                                <p className="font-medium">{selectedHistoryItem.patientId}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                                        <h4 className="font-bold text-gray-900 mb-2">Compliance Analysis</h4>
+                                        <div className="mb-2">
+                                            <span className="text-sm text-gray-600">Compliance Score:</span>
+                                            <div className="flex items-center mt-1">
+                                                <div className="w-full bg-gray-200 rounded-full h-2 mr-2">
+                                                    <div 
+                                                        className={`h-2 rounded-full ${
+                                                            selectedHistoryItem.approvalRate >= 80 ? 'bg-green-500' : 
+                                                            selectedHistoryItem.approvalRate >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+                                                        }`}
+                                                        style={{width: `${selectedHistoryItem.approvalRate}%`}}
+                                                    ></div>
+                                                </div>
+                                                <span className="font-medium">{selectedHistoryItem.approvalRate}%</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span className="text-sm text-gray-600">Status:</span>
+                                            <span className={`ml-2 status-badge ${
+                                                selectedHistoryItem.isApproved ? 'status-badge-success' : 'status-badge-danger'
+                                            }`}>
+                                                {selectedHistoryItem.isApproved ? 'Approved' : 'Review Required'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    {selectedHistoryItem.extractedText && (
+                                        <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                                            <h4 className="font-bold text-gray-900 mb-2">Extracted Text Preview</h4>
+                                            <div className="text-preview h-40">
+                                                {selectedHistoryItem.extractedText}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                                
+                                <div className="flex justify-end space-x-4">
+                                    <button 
+                                        onClick={() => handleViewDocument(selectedHistoryItem)}
+                                        className="btn-primary"
+                                    >
+                                        <i className="fas fa-file-pdf mr-2"></i>
+                                        View Document
+                                    </button>
+                                    <button 
+                                        onClick={() => handleExportHistoryItem(selectedHistoryItem)}
+                                        className="btn-primary"
+                                    >
+                                        <i className="fas fa-download mr-2"></i>
+                                        Export Report
+                                    </button>
+                                    <button 
+                                        onClick={() => setShowHistoryModal(false)}
+                                        className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                                    >
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    
+                    {/* Document Viewer Modal */}
+                    {showDocumentModal && (
+                        <div className="modal-overlay">
+                            <div className="modal-content p-8 w-full max-w-5xl">
+                                <div className="flex justify-between items-center mb-6">
+                                    <h2 className="text-2xl font-bold text-gray-900">Document Viewer</h2>
+                                    <button 
+                                        onClick={() => setShowDocumentModal(false)}
+                                        className="text-gray-500 hover:text-gray-700"
+                                    >
+                                        <i className="fas fa-times text-xl"></i>
+                                    </button>
+                                </div>
+                                
+                                <div className="pdf-viewer">
+                                    <iframe 
+                                        src={documentUrl} 
+                                        width="100%" 
+                                        height="100%" 
+                                        title="PDF Document"
+                                        className="border-0 rounded-lg"
+                                    ></iframe>
+                                </div>
+                                
+                                <div className="flex justify-end mt-6">
+                                    <button 
+                                        onClick={() => setShowDocumentModal(false)}
+                                        className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                                    >
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    
+                    {/* Enhanced Footer */}
+                    <footer className="glass-morphism mt-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                            <div className="flex flex-col md:flex-row justify-between items-center">
+                                <div className="mb-4 md:mb-0">
+                                    <p className="text-sm text-gray-700">© 2024 SHA-AI-VALIDATOR. Powered by Advanced AI Technology.</p>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        Backend Status: 
+                                        <span className={`ml-2 font-bold ${connectionStatus === 'connected' ? 'text-green-600' : 'text-red-600'}`}>
+                                            {connectionStatus === 'connected' ? 'Connected' : 'Disconnected'}
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className="flex space-x-6">
+                                    <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors text-sm">Privacy</a>
+                                    <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors text-sm">Terms</a>
+                                    <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors text-sm">Support</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+        
+        // Enhanced Welcome Page Component
+        function WelcomePage({ onFileUpload, connectionStatus, validationError }) {
+            const [dragActive, setDragActive] = useState(false);
+            
+            const handleDrag = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (e.type === "dragenter" || e.type === "dragover") {
+                    setDragActive(true);
+                } else if (e.type === "dragleave") {
+                    setDragActive(false);
+                }
+            };
+            
+            const handleDrop = async (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setDragActive(false);
+                
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    await onFileUpload(e.dataTransfer.files[0]);
+                }
+            };
+            
+            const handleChange = async (e) => {
+                e.preventDefault();
+                if (e.target.files && e.target.files[0]) {
+                    await onFileUpload(e.target.files[0]);
+                }
+            };
+            
+            return (
+                <div className="fade-in-up">
+                    <div className="text-center mb-12">
+                        <h2 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">
+                            Welcome to CLAIM FLOW
+                        </h2>
+                        <p className="text-xl text-white/90 max-w-3xl mx-auto drop-shadow">
+                            Advanced AI-powered analysis for SHA healthcare documents. Our system scans your documents in real-time to extract key information and predict approval outcomes.
+                        </p>
+                    </div>
+                    
+                    {/* Connection Status Card */}
+                    {connectionStatus !== 'connected' && (
+                        <div className="card-elevated p-6 mb-8 border-l-4 border-red-500">
+                            <div className="flex items-center">
+                                <i className="fas fa-exclamation-triangle text-red-500 text-2xl mr-4"></i>
+                                <div>
+                                    <h3 className="text-lg font-bold text-gray-900">Backend Server Not Connected</h3>
+                                    <p className="text-gray-600">
+                                        Please make sure your Flask backend server is running on <code className="bg-gray-100 px-2 py-1 rounded">http://localhost:5000</code>
+                                    </p>
+                                    <p className="text-sm text-gray-500 mt-2">
+                                        <i className="fas fa-terminal mr-1"></i>
+                                        Run: <code className="bg-gray-800 text-white px-2 py-1 rounded">python app.py</code> in your backend directory
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Validation Error Display */}
+                    {validationError && (
+                        <div className="card-elevated p-6 mb-8 border-l-4 border-red-500">
+                            <div className="flex items-center">
+                                <i className="fas fa-file-exclamation text-red-500 text-2xl mr-4"></i>
+                                <div>
+                                    <h3 className="text-lg font-bold text-gray-900">Invalid PDF File</h3>
+                                    <p className="text-gray-600">{validationError}</p>
+                                    <p className="text-sm text-gray-500 mt-2">
+                                        <i className="fas fa-lightbulb mr-1"></i>
+                                        Tip: Try opening the file in a PDF reader first to verify it's not corrupted
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    
+                    <div className="grid md:grid-cols-3 gap-8 mb-12">
+                        {[
+                            { 
+                                icon: 'fa-brain', 
+                                title: 'Smart PDF Validation', 
+                                desc: 'Advanced validation checks PDF structure and prevents corrupted file uploads.', 
+                                color: 'from-blue-500 to-indigo-600' 
+                            },
+                            { 
+                                icon: 'fa-chart-line', 
+                                title: 'Intelligent Analysis', 
+                                desc: 'Identifies key information patterns and calculates approval probability.', 
+                                color: 'from-green-500 to-emerald-600' 
+                            },
+                            { 
+                                icon: 'fa-exclamation-triangle', 
+                                title: 'Issue Detection', 
+                                desc: 'Detects missing information and potential issues before submission.', 
+                                color: 'from-purple-500 to-pink-600' 
+                            }
+                        ].map((feature, index) => (
+                            <div key={index} className="card-elevated p-8 slide-in-left" style={{animationDelay: `${index * 0.1}s`}}>
+                                <div className={`icon-circle bg-gradient-to-r ${feature.color} text-white mb-6 floating`}>
+                                    <i className={`fas ${feature.icon}`}></i>
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                                <p className="text-gray-600">{feature.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                    
+                    <div className="card-elevated p-10">
+                        <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Upload Your SHA Document</h3>
+                        
+                        <form 
+                            className={`border-3 border-dashed rounded-2xl p-16 text-center transition-all duration-300 ${
+                                dragActive 
+                                    ? "border-indigo-500 bg-gradient-to-br from-indigo-50 to-purple-50 scale-105" 
+                                    : "border-gray-300 bg-white hover:border-indigo-400"
+                            }`}
+                            onDragEnter={handleDrag}
+                            onDragLeave={handleDrag}
+                            onDragOver={handleDrag}
+                            onDrop={handleDrop}
+                        >
+                            <div className={`icon-circle ${dragActive ? 'gradient-animated pulse-glow' : 'bg-gray-100'} mb-6 mx-auto`}>
+                                <i className={`fas fa-cloud-upload-alt ${dragActive ? 'text-white' : 'text-gray-400'}`}></i>
+                            </div>
+                            <p className="text-xl text-gray-700 mb-3 font-medium">
+                                {dragActive ? 'Drop your document here' : 'Drag and drop your SHA document here'}
+                            </p>
+                            <p className="text-gray-500 mb-6">or</p>
+                            <label className="inline-block">
+                                <input 
+                                    type="file" 
+                                    className="hidden" 
+                                    accept=".pdf"
+                                    onChange={handleChange}
+                                    disabled={connectionStatus !== 'connected'}
+                                />
+                                <span className={`btn-primary cursor-pointer inline-block ${connectionStatus !== 'connected' ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                    <i className="fas fa-folder-open mr-2"></i>
+                                    Browse Files
+                                </span>
+                            </label>
+                            <p className="text-sm text-gray-500 mt-6">
+                                <i className="fas fa-info-circle mr-1"></i>
+                                Supported format: PDF (Max 10MB) • Automatic validation for file integrity
+                            </p>
+                            {connectionStatus !== 'connected' && (
+                                <p className="text-sm text-red-500 mt-4">
+                                    <i className="fas fa-exclamation-circle mr-1"></i>
+                                    File upload disabled - backend server not connected
+                                </p>
+                            )}
+                        </form>
+                    </div>
+                </div>
+            );
+        }
+        
+        // Enhanced Upload Page Component
+        function UploadPage({ file, onFileChange, onAnalyze, apiError, connectionStatus, validationError }) {
+            const [preview, setPreview] = useState(null);
+            
+            useEffect(() => {
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onloadend = () => {
+                        setPreview(reader.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }, [file]);
+            
+            return (
+                <div className="fade-in-up">
+                    <div className="card-elevated p-10">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-8">Document Upload</h2>
+                        
+                        {apiError && (
+                            <div className="error-message">
+                                <i className="fas fa-exclamation-circle mr-2"></i>
+                                <strong>Analysis Error:</strong> {apiError}
+                            </div>
+                        )}
+
+                        {validationError && (
+                            <div className="error-message">
+                                <i className="fas fa-file-exclamation mr-2"></i>
+                                <strong>Validation Error:</strong> {validationError}
+                            </div>
+                        )}
+                        
+                        {connectionStatus !== 'connected' && (
+                            <div className="error-message">
+                                <i className="fas fa-unlink mr-2"></i>
+                                <strong>Connection Error:</strong> Cannot connect to backend server. Please make sure the Flask server is running on port 5000.
+                            </div>
+                        )}
+                        
+                        {file ? (
+                            <div className="space-y-8">
+                                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200">
+                                    <div className="flex items-center justify-between mb-6">
+                                        <div className="flex items-center space-x-4">
+                                            <div className="icon-circle bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+                                                <i className="fas fa-file-pdf"></i>
+                                            </div>
+                                            <div>
+                                                <p className="font-bold text-gray-900 text-lg">{file.name}</p>
+                                                <p className="text-sm text-gray-600">
+                                                    <i className="fas fa-database mr-1"></i>
+                                                    {(file.size / 1024 / 1024).toFixed(2)} MB • 
+                                                    <i className="fas fa-check-circle ml-2 text-green-500"></i>
+                                                    <span className="text-green-600 ml-1">Valid PDF</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button 
+                                            onClick={() => onFileChange(null)}
+                                            className="text-red-500 hover:text-red-700 transition-colors"
+                                        >
+                                            <i className="fas fa-times-circle text-2xl"></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <div className="bg-white rounded-xl p-6 shadow-inner">
+                                        <p className="text-sm text-gray-600 mb-4 font-medium">
+                                            <i className="fas fa-eye mr-2"></i>
+                                            Document Preview
+                                        </p>
+                                        <div className="h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
+                                            <i className="fas fa-file-pdf text-6xl text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                                    <h4 className="font-semibold text-blue-900 mb-2">
+                                        <i className="fas fa-info-circle mr-2"></i>
+                                        What happens next?
+                                    </h4>
+                                    <p className="text-blue-800">
+                                        Our AI will scan your document to extract key information such as patient details, 
+                                        diagnosis codes, and authorization status. It will then analyze this information 
+                                        to predict the likelihood of approval and identify any potential issues.
+                                    </p>
+                                </div>
+                                
+                                <div className="flex justify-between items-center">
+                                    <button 
+                                        onClick={() => onFileChange(null)}
+                                        className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-all duration-300 font-medium"
+                                    >
+                                        <i className="fas fa-arrow-left mr-2"></i>
+                                        Upload Different File
+                                    </button>
+                                    <button 
+                                        onClick={onAnalyze}
+                                        disabled={connectionStatus !== 'connected'}
+                                        className={`btn-primary text-lg px-8 py-4 ${connectionStatus !== 'connected' ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    >
+                                        <i className="fas fa-search mr-2"></i>
+                                        Analyze Document
+                                    </button>
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="text-center py-16">
+                                <div className="icon-circle bg-gray-100 mb-6 mx-auto">
+                                    <i className="fas fa-file-upload text-gray-400"></i>
+                                </div>
+                                <p className="text-xl text-gray-500 mb-6">No file uploaded</p>
+                                <button 
+                                    onClick={() => document.getElementById('file-input').click()}
+                                    disabled={connectionStatus !== 'connected'}
+                                    className={`btn-primary ${connectionStatus !== 'connected' ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                >
+                                    <i className="fas fa-upload mr-2"></i>
+                                    Select File
+                                </button>
+                                <input 
+                                    id="file-input"
+                                    type="file" 
+                                    className="hidden" 
+                                    accept=".pdf"
+                                    onChange={async (e) => {
+                                        if (e.target.files[0]) {
+                                            // This will trigger validation in the parent component
+                                            // We need to pass the file up to App component for validation
+                                            const event = new Event('change', { bubbles: true });
+                                            Object.defineProperty(event, 'target', { value: e.target });
+                                            await e.target.dispatchEvent(event);
+                                        }
+                                    }}
+                                    disabled={connectionStatus !== 'connected'}
+                                />
+                                {connectionStatus !== 'connected' && (
+                                    <p className="text-red-500 mt-4">
+                                        <i className="fas fa-exclamation-circle mr-1"></i>
+                                        File selection disabled - backend server not connected
+                                    </p>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+        
+        // Enhanced Analyzing Page Component with 5% increments
+        function AnalyzingPage({ progress }) {
+            const [currentStep, setCurrentStep] = useState(0);
+            
+            useEffect(() => {
+                // Calculate current step based on progress
+                const step = Math.floor(progress / 20); // 5 steps: 0-20, 20-40, 40-60, 60-80, 80-100
+                setCurrentStep(Math.min(step, 4));
+            }, [progress]);
+            
+            return (
+                <div className="fade-in-up">
+                    <div className="card-elevated p-12">
+                        <div className="text-center">
+                            <div className="inline-flex items-center justify-center w-24 h-24 gradient-animated rounded-full mb-8 pulse-glow">
+                                <i className="fas fa-brain text-white text-4xl spinner"></i>
+                            </div>
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Analyzing Document</h2>
+                            <p className="text-gray-600 mb-10 text-lg">
+                                Our AI is processing your SHA document to extract and analyze information
+                                <div className="loading-dots ml-2 inline-flex">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </p>
+                            
+                            <div className="max-w-2xl mx-auto">
+                                <div className="mb-8">
+                                    <div className="flex justify-between mb-2">
+                                        <span className="text-sm font-medium text-gray-700">Analysis Progress</span>
+                                        <span className="text-sm font-bold text-indigo-600">{progress}%</span>
+                                    </div>
+                                    <div className="progress-bar h-4">
+                                        <div 
+                                            className="progress-fill gradient-animated"
+                                            style={{width: `${progress}%`}}
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div className="space-y-3 mb-8">
+                                    {[
+                                        { 
+                                            icon: 'fa-check-circle', 
+                                            text: 'Document validated successfully', 
+                                            percentage: 5,
+                                            completed: progress >= 5
+                                        },
+                                        { 
+                                            icon: 'fa-file-alt', 
+                                            text: 'Extracting text from PDF', 
+                                            percentage: 25,
+                                            completed: progress >= 25
+                                        },
+                                        { 
+                                            icon: 'fa-search', 
+                                            text: 'Analyzing document content', 
+                                            percentage: 50,
+                                            completed: progress >= 50
+                                        },
+                                        { 
+                                            icon: 'fa-clipboard-check', 
+                                            text: 'Checking compliance requirements', 
+                                            percentage: 75,
+                                            completed: progress >= 75
+                                        },
+                                        { 
+                                            icon: 'fa-chart-line', 
+                                            text: 'Generating approval prediction', 
+                                            percentage: 100,
+                                            completed: progress >= 100
+                                        }
+                                    ].map((step, index) => (
+                                        <div 
+                                            key={index} 
+                                            className={`progress-step ${step.completed ? 'active' : ''}`}
+                                        >
+                                            <div className={`progress-step-icon ${
+                                                step.completed 
+                                                    ? 'bg-green-100 text-green-600' 
+                                                    : 'bg-gray-100 text-gray-400'
+                                            }`}>
+                                                <i className={`fas ${step.icon}`}></i>
+                                            </div>
+                                            <div className="progress-step-text">
+                                                <span className={`font-medium ${step.completed ? 'text-gray-900' : 'text-gray-500'}`}>
+                                                    {step.text}
+                                                </span>
+                                            </div>
+                                            <div className="progress-percentage">
+                                                {step.completed ? '✓' : `${step.percentage}%`}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        
+        // Enhanced Results Page Component with SHA Compliance
+        function ResultsPage({ result, extractedText, onNewAnalysis }) {
+            if (!result) return null;
+            
+            const [showExtractedText, setShowExtractedText] = useState(false);
+            const [activeTab, setActiveTab] = useState('overview');
+            
+            // Use the new SHA compliance data structure
+            const complianceData = result.compliance_analysis || {};
+            const shaRecommendations = result.approval_recommendations || "";
+            
+            // Enhanced result processing for SHA compliance
+            const enhancedResult = {
+                // Basic document info
+                filename: result.document_analysis?.filename || "Unknown",
+                approvalStatus: result.document_analysis?.approval_status || complianceData.STATUS || "UNKNOWN",
+                approvalRate: result.document_analysis?.approval_rate || complianceData.COMPLIANCE_SCORE || 0,
+                complianceScore: complianceData.COMPLIANCE_SCORE || 0,
+                confidenceLevel: result.document_analysis?.confidence_level || 0,
+                riskAssessment: result.document_analysis?.risk_assessment || "UNKNOWN",
+                
+                // SHA Compliance specific data
+                missingRequirements: complianceData.MISSING_REQUIREMENTS || [],
+                fulfilledRequirements: complianceData.FULFILLED_REQUIREMENTS || [],
+                criticalIssues: complianceData.CRITICAL_ISSUES || [],
+                recommendations: complianceData.RECOMMENDATIONS || [],
+                itemizationQuality: complianceData.ITEMIZATION_QUALITY || "Unknown",
+                declarationsStatus: complianceData.DECLARATIONS_STATUS || "Unknown",
+                timeliness: complianceData.TIMELINESS || "Unknown",
+                codingAccuracy: complianceData.CODING_ACCURACY || "Unknown",
+                
+                // Extracted information
+                patientName: result.extracted_information?.patient_name || "Not specified",
+                patientId: result.extracted_information?.patient_id || "Not specified",
+                facility: result.extracted_information?.facility || "Not specified",
+                diagnosis: result.extracted_information?.diagnosis || "Not specified",
+                serviceDates: result.extracted_information?.service_dates || "Not specified",
+                physicianName: result.extracted_information?.physician_name || "Not specified",
+                servicesCount: result.extracted_information?.services_count || 0,
+                
+                // AI powered flag
+                aiPowered: result.document_analysis?.ai_powered || false
+            };
+
+            // Calculate status colors and icons
+            const getStatusColor = (status) => {
+                switch (status?.toUpperCase()) {
+                    case 'COMPLIANT': return 'from-green-500 to-green-600';
+                    case 'PARTIALLY COMPLIANT': return 'from-yellow-500 to-yellow-600';
+                    case 'NON-COMPLIANT': return 'from-red-500 to-red-600';
+                    default: return 'from-gray-500 to-gray-600';
+                }
+            };
+
+            const getStatusIcon = (status) => {
+                switch (status?.toUpperCase()) {
+                    case 'COMPLIANT': return 'fa-check-circle';
+                    case 'PARTIALLY COMPLIANT': return 'fa-exclamation-circle';
+                    case 'NON-COMPLIANT': return 'fa-times-circle';
+                    default: return 'fa-question-circle';
+                }
+            };
+
+            return (
+                <div className="fade-in-up">
+                    <div className="card-elevated p-10 mb-8">
+                        {/* Header with SHA Compliance Status */}
+                        <div className="flex justify-between items-center mb-8">
+                            <div>
+                                <h2 className="text-3xl font-bold text-gray-900">SHA Compliance Analysis</h2>
+                                <p className="text-gray-600 mt-2">Comprehensive review against SHA requirements</p>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                                {enhancedResult.aiPowered && (
+                                    <div className="status-badge status-badge-success">
+                                        <i className="fas fa-robot"></i>
+                                        AI Powered
+                                    </div>
+                                )}
+                                <div className={`status-badge bg-gradient-to-r ${getStatusColor(enhancedResult.approvalStatus)} text-white`}>
+                                    <i className={`fas ${getStatusIcon(enhancedResult.approvalStatus)}`}></i>
+                                    {enhancedResult.approvalStatus}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Compliance Score Card */}
+                        <div className="grid md:grid-cols-2 gap-8 mb-10">
+                            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <i className="fas fa-user-circle mr-3 text-indigo-600"></i>
+                                    Document Information
+                                </h3>
+                                <div className="space-y-4">
+                                    {[
+                                        { label: 'Patient Name', value: enhancedResult.patientName },
+                                        { label: 'Patient ID', value: enhancedResult.patientId },
+                                        { label: 'Facility', value: enhancedResult.facility },
+                                        { label: 'Physician', value: enhancedResult.physicianName },
+                                        { label: 'Diagnosis', value: enhancedResult.diagnosis },
+                                        { label: 'Service Dates', value: enhancedResult.serviceDates },
+                                        { label: 'Services Documented', value: enhancedResult.servicesCount }
+                                    ].map((item, index) => (
+                                        <div key={index} className="flex justify-between items-center p-3 bg-white rounded-lg">
+                                            <span className="text-gray-600 font-medium">{item.label}:</span>
+                                            <span className="font-bold text-gray-900 text-right max-w-xs">{item.value}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                                    <i className="fas fa-chart-pie mr-3 text-indigo-600"></i>
+                                    Compliance Analysis
+                                </h3>
+                                <div className="mb-6">
+                                    <div className="flex justify-between items-center mb-3">
+                                        <span className="text-gray-700 font-medium">Compliance Score:</span>
+                                        <span className={`font-bold text-3xl ${
+                                            enhancedResult.complianceScore >= 80 ? 'text-green-600' : 
+                                            enhancedResult.complianceScore >= 60 ? 'text-yellow-600' : 'text-red-600'
+                                        }`}>
+                                            {enhancedResult.complianceScore}%
+                                        </span>
+                                    </div>
+                                    <div className="progress-bar h-4">
+                                        <div 
+                                            className={`progress-fill ${
+                                                enhancedResult.complianceScore >= 80 ? 'bg-gradient-to-r from-green-400 to-green-600' : 
+                                                enhancedResult.complianceScore >= 60 ? 'bg-gradient-to-r from-yellow-400 to-yellow-600' : 
+                                                'bg-gradient-to-r from-red-400 to-red-600'
+                                            }`}
+                                            style={{width: `${enhancedResult.complianceScore}%`}}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div className="space-y-3">
+                                    {[
+                                        { label: 'Itemization Quality', value: enhancedResult.itemizationQuality, icon: 'fa-list' },
+                                        { label: 'Declarations Status', value: enhancedResult.declarationsStatus, icon: 'fa-file-signature' },
+                                        { label: 'Timeliness', value: enhancedResult.timeliness, icon: 'fa-clock' },
+                                        { label: 'Coding Accuracy', value: enhancedResult.codingAccuracy, icon: 'fa-code' }
+                                    ].map((item, index) => (
+                                        <div key={index} className="flex justify-between items-center p-3 bg-white rounded-lg">
+                                            <span className="text-gray-700 font-medium">
+                                                <i className={`fas ${item.icon} mr-2 text-indigo-600`}></i>
+                                                {item.label}:
+                                            </span>
+                                            <span className={`font-bold ${
+                                                item.value?.toLowerCase().includes('excellent') || item.value?.toLowerCase().includes('complete') ? 'text-green-600' :
+                                                item.value?.toLowerCase().includes('partial') ? 'text-yellow-600' :
+                                                item.value?.toLowerCase().includes('unknown') ? 'text-gray-600' : 'text-red-600'
+                                            }`}>
+                                                {item.value}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Tab Navigation for Detailed Analysis */}
+                        <div className="border-b border-gray-200 mb-8">
+                            <nav className="-mb-px flex space-x-8">
+                                {[
+                                    { id: 'overview', label: 'Overview', icon: 'fa-eye' },
+                                    { id: 'requirements', label: 'Requirements', icon: 'fa-tasks' },
+                                    { id: 'issues', label: 'Critical Issues', icon: 'fa-exclamation-triangle' },
+                                    { id: 'recommendations', label: 'Recommendations', icon: 'fa-lightbulb' }
+                                ].map(tab => (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => setActiveTab(tab.id)}
+                                        className={`whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center ${
+                                            activeTab === tab.id
+                                                ? 'border-indigo-500 text-indigo-600'
+                                                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                                        }`}
+                                    >
+                                        <i className={`fas ${tab.icon} mr-2`}></i>
+                                        {tab.label}
+                                    </button>
+                                ))}
+                            </nav>
+                        </div>
+
+                        {/* Tab Content */}
+                        <div className="min-h-96">
+                            {/* Overview Tab */}
+                            {activeTab === 'overview' && (
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-200">
+                                        <h3 className="text-xl font-bold text-green-900 mb-6 flex items-center">
+                                            <i className="fas fa-check-double mr-3 text-green-600"></i>
+                                            Fulfilled Requirements ({enhancedResult.fulfilledRequirements.length})
+                                        </h3>
+                                        <ul className="space-y-3">
+                                            {enhancedResult.fulfilledRequirements.length > 0 ? enhancedResult.fulfilledRequirements.map((item, index) => (
+                                                <li key={index} className="flex items-start p-3 bg-white/70 rounded-lg">
+                                                    <i className="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                                    <span className="text-gray-700">{item}</span>
+                                                </li>
+                                            )) : (
+                                                <li className="text-gray-500 italic">No requirements fully met</li>
+                                            )}
+                                        </ul>
+                                    </div>
+                                    
+                                    <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 border-2 border-red-200">
+                                        <h3 className="text-xl font-bold text-red-900 mb-6 flex items-center">
+                                            <i className="fas fa-exclamation-circle mr-3 text-red-600"></i>
+                                            Missing Requirements ({enhancedResult.missingRequirements.length})
+                                        </h3>
+                                        <ul className="space-y-3">
+                                            {enhancedResult.missingRequirements.length > 0 ? enhancedResult.missingRequirements.map((item, index) => (
+                                                <li key={index} className="flex items-start p-3 bg-white/70 rounded-lg">
+                                                    <i className="fas fa-times-circle text-red-500 mr-3 mt-1"></i>
+                                                    <span className="text-gray-700">{item}</span>
+                                                </li>
+                                            )) : (
+                                                <li className="text-gray-500 italic">All requirements met</li>
+                                            )}
+                                        </ul>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Requirements Tab */}
+                            {activeTab === 'requirements' && (
+                                <div className="bg-white rounded-2xl p-8 border-2 border-gray-200">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-6">SHA Requirements Breakdown</h3>
+                                    <div className="space-y-4">
+                                        {[
+                                            { 
+                                                requirement: "Complete Required Fields", 
+                                                status: enhancedResult.missingRequirements.some(r => r.toLowerCase().includes('field')) ? 'Missing' : 'Complete',
+                                                description: "All fields on the claim form must be completed accurately"
+                                            },
+                                            { 
+                                                requirement: "Consistent Identifiers", 
+                                                status: enhancedResult.missingRequirements.some(r => r.toLowerCase().includes('identifier') || r.toLowerCase().includes('sha number') || r.toLowerCase().includes('fid')) ? 'Missing' : 'Complete',
+                                                description: "Patient identifiers (SHA number), facility identifiers (FID) must be consistent"
+                                            },
+                                            { 
+                                                requirement: "Accurate Coding", 
+                                                status: enhancedResult.codingAccuracy === 'Verified' ? 'Complete' : 'Issues Found',
+                                                description: "Diagnoses must use correct coding systems (ICD-11), proper SHA/PFMS intervention codes"
+                                            },
+                                            { 
+                                                requirement: "Itemized Services and Costs", 
+                                                status: enhancedResult.itemizationQuality === 'Excellent' ? 'Complete' : 'Needs Improvement',
+                                                description: "Detailed, itemized list of all services provided with costs and dates"
+                                            },
+                                            { 
+                                                requirement: "Official Declarations", 
+                                                status: enhancedResult.declarationsStatus === 'Complete' ? 'Complete' : 'Incomplete',
+                                                description: "Hospital certification and patient declaration of treatment received"
+                                            },
+                                            { 
+                                                requirement: "Timely Submission", 
+                                                status: enhancedResult.timeliness === 'Within window' ? 'Timely' : 'Delayed',
+                                                description: "Claims must be submitted within 7 days of patient discharge"
+                                            }
+                                        ].map((req, index) => (
+                                            <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                                <div className="flex-1">
+                                                    <h4 className="font-bold text-gray-900">{req.requirement}</h4>
+                                                    <p className="text-sm text-gray-600">{req.description}</p>
+                                                </div>
+                                                <span className={`status-badge ${
+                                                    req.status === 'Complete' || req.status === 'Timely' ? 'status-badge-success' :
+                                                    req.status === 'Needs Improvement' ? 'status-badge-warning' : 'status-badge-danger'
+                                                }`}>
+                                                    {req.status}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Critical Issues Tab */}
+                            {activeTab === 'issues' && (
+                                <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 border-2 border-red-200">
+                                    <h3 className="text-xl font-bold text-red-900 mb-6 flex items-center">
+                                        <i className="fas fa-exclamation-triangle mr-3 text-red-600"></i>
+                                        Critical Issues ({enhancedResult.criticalIssues.length})
+                                    </h3>
+                                    {enhancedResult.criticalIssues.length > 0 ? (
+                                        <ul className="space-y-4">
+                                            {enhancedResult.criticalIssues.map((issue, index) => (
+                                                <li key={index} className="flex items-start p-4 bg-white/70 rounded-lg border-l-4 border-red-500">
+                                                    <i className="fas fa-times-circle text-red-500 mr-3 mt-1 text-xl"></i>
+                                                    <div>
+                                                        <p className="text-gray-900 font-medium">{issue}</p>
+                                                        <p className="text-sm text-red-600 mt-1">This may cause claim rejection</p>
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <div className="text-center py-8">
+                                            <i className="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+                                            <p className="text-green-800 font-medium">No critical issues found</p>
+                                            <p className="text-green-600">Your document meets all critical SHA requirements</p>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+                            {/* Recommendations Tab */}
+                            {activeTab === 'recommendations' && (
+                                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-200">
+                                    <h3 className="text-xl font-bold text-blue-900 mb-6 flex items-center">
+                                        <i className="fas fa-lightbulb mr-3 text-yellow-500"></i>
+                                        AI Recommendations
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div className="bg-white rounded-xl p-6 mb-6">
+                                            <h4 className="font-bold text-gray-900 mb-3">Approval Summary</h4>
+                                            <p className="text-gray-700 leading-relaxed">{shaRecommendations}</p>
+                                        </div>
+                                        
+                                        <h4 className="font-bold text-gray-900 mb-3">Specific Actions Required:</h4>
+                                        {enhancedResult.recommendations.length > 0 ? (
+                                            <ul className="space-y-3">
+                                                {enhancedResult.recommendations.map((rec, index) => (
+                                                    <li key={index} className="flex items-start p-3 bg-white/70 rounded-lg">
+                                                        <i className="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                                                        <span className="text-gray-700">{rec}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        ) : (
+                                            <p className="text-gray-500 italic">No specific recommendations available</p>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Extracted Text Section */}
+                        <div className="bg-gray-50 rounded-xl p-6 mt-8">
+                            <div className="flex justify-between items-center mb-4">
+                                <h3 className="text-lg font-bold text-gray-900">
+                                    <i className="fas fa-file-alt mr-2 text-indigo-600"></i>
+                                    Extracted Text Preview
+                                </h3>
+                                <button 
+                                    onClick={() => setShowExtractedText(!showExtractedText)}
+                                    className="text-indigo-600 hover:text-indigo-800 font-medium"
+                                >
+                                    {showExtractedText ? 'Hide' : 'Show'} Text
+                                </button>
+                            </div>
+                            
+                            {showExtractedText && (
+                                <div className="text-preview">
+                                    {extractedText || result.extracted_text_preview || "No extracted text available."}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    
+                    {/* Action Buttons */}
+                    <div className="flex justify-center space-x-6">
+                        <button 
+                            onClick={onNewAnalysis}
+                            className="btn-primary text-lg px-8 py-4"
+                        >
+                            <i className="fas fa-plus mr-2"></i>
+                            Analyze Another Document
+                        </button>
+                        <button 
+                            onClick={() => exportToPDF(enhancedResult)}
+                            className="px-8 py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-all duration-300 font-medium"
+                        >
+                            <i className="fas fa-download mr-2"></i>
+                            Download Compliance Report
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+        
+        // Enhanced History Page Component with Document Viewer
+        function HistoryPage({ history, onViewItem, onViewDocument, onExportItem }) {
+            return (
+                <div className="fade-in-up">
+                    <div className="card-elevated p-10">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-8">Analysis History</h2>
+                        
+                        {history.length > 0 ? (
+                            <div className="table-modern">
+                                <table className="min-w-full">
+                                    <thead>
+                                        <tr>
+                                            <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">
+                                                Patient
+                                            </th>
+                                            <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">
+                                                Document Type
+                                            </th>
+                                            <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">
+                                                Date
+                                            </th>
+                                            <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">
+                                                Approval Rate
+                                            </th>
+                                            <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">
+                                                Status
+                                            </th>
+                                            <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">
+                                                Actions
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-200">
+                                        {history.map((item, index) => {
+                                            const actualItem = {
+                                                patientName: item.patientName || item.patient_name || "Patient " + (index + 1),
+                                                patientId: item.patientId || item.patient_id || "PAT-" + (index + 1).toString().padStart(3, '0'),
+                                                documentType: item.documentType || item.document_type || "Healthcare Document",
+                                                submissionDate: item.submissionDate || item.submission_date || new Date().toISOString().split('T')[0],
+                                                approvalRate: item.approvalRate || item.approval_rate || 0,
+                                                isApproved: item.isApproved || item.is_approved || false
+                                            };
+                                            
+                                            return (
+                                                <tr key={item.id || index} className="hover:bg-gradient-to-r hover:from-gray-50 hover:to-white transition-all duration-200">
+                                                    <td className="px-6 py-4 whitespace-nowrap">
+                                                        <div className="flex items-center">
+                                                            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-400 to-purple-400 flex items-center justify-center text-white font-bold mr-3">
+                                                                {actualItem.patientName.charAt(0)}
+                                                            </div>
+                                                            <div>
+                                                                <div className="text-sm font-bold text-gray-900">{actualItem.patientName}</div>
+                                                                <div className="text-sm text-gray-500">{actualItem.patientId}</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap">
+                                                        <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">
+                                                            {actualItem.documentType}
+                                                        </span>
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
+                                                        {actualItem.submissionDate}
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap">
+                                                        <div className="flex items-center">
+                                                            <span className={`text-sm font-bold mr-3 ${actualItem.isApproved ? 'text-green-600' : 'text-red-600'}`}>
+                                                                {actualItem.approvalRate}%
+                                                            </span>
+                                                            <div className="w-20 bg-gray-200 rounded-full h-2">
+                                                                <div 
+                                                                    className={`h-2 rounded-full ${actualItem.isApproved ? 'bg-gradient-to-r from-green-400 to-green-600' : 'bg-gradient-to-r from-red-400 to-red-600'}`}
+                                                                    style={{width: `${actualItem.approvalRate}%`}}
+                                                                ></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap">
+                                                        <span className={`status-badge ${actualItem.isApproved ? 'status-badge-success' : 'status-badge-danger'}`}>
+                                                            <i className={`fas ${actualItem.isApproved ? 'fa-check' : 'fa-times'} text-xs`}></i>
+                                                            {actualItem.isApproved ? 'Approved' : 'Review'}
+                                                        </span>
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                        <button 
+                                                            onClick={() => onViewItem(item)}
+                                                            className="text-indigo-600 hover:text-indigo-900 mr-2 transition-colors"
+                                                        >
+                                                            <i className="fas fa-eye mr-1"></i>View
+                                                        </button>
+                                                        <button 
+                                                            onClick={() => onViewDocument(item)}
+                                                            className="text-blue-600 hover:text-blue-900 mr-2 transition-colors"
+                                                        >
+                                                            <i className="fas fa-file-pdf mr-1"></i>Document
+                                                        </button>
+                                                        <button 
+                                                            onClick={() => onExportItem(item)}
+                                                            className="text-gray-600 hover:text-gray-900 transition-colors"
+                                                        >
+                                                            <i className="fas fa-file-export mr-1"></i>Export
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody>
+                                </table>
+                            </div>
+                        ) : (
+                            <div className="text-center py-16">
+                                <div className="icon-circle bg-gray-100 mb-6 mx-auto">
+                                    <i className="fas fa-history text-gray-400"></i>
+                                </div>
+                                <p className="text-xl text-gray-500">No analysis history yet</p>
+                                <p className="text-gray-400 mt-2">Upload and analyze documents to see them here</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+        
+        // Render the app
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

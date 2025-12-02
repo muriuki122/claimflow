@@ -1,0 +1,40 @@
+2025-11-20 03:13:19,546 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.102:5000
+2025-11-20 03:13:19,546 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-20 03:13:19,613 - werkzeug - INFO -  * Restarting with stat
+2025-11-20 03:13:31,292 - werkzeug - WARNING -  * Debugger is active!
+2025-11-20 03:13:31,432 - werkzeug - INFO -  * Debugger PIN: 136-266-850
+2025-11-20 03:13:52,656 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2025 03:13:52] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-11-20 03:14:02,492 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2025 03:14:02] "OPTIONS /api/health HTTP/1.1" 200 -
+2025-11-20 03:14:03,805 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2025 03:14:03] "GET /api/health HTTP/1.1" 200 -
+2025-11-20 03:14:20,933 - __main__ - INFO - SHA COMPLIANCE ANALYSIS REQUEST RECEIVED!
+2025-11-20 03:14:21,030 - __main__ - INFO - Processing: rachael Njoroge claim.pdf
+2025-11-20 03:14:21,369 - __main__ - INFO - Scanning PDF: C:\Users\MURIUK~1\AppData\Local\Temp\tmpqla64bfq.pdf
+2025-11-20 03:14:21,371 - __main__ - ERROR - PDF extraction error: No /Root object! - Is this really a PDF?
+2025-11-20 03:14:22,529 - __main__ - ERROR - Full OCR extraction failed: Could not read image: C:\Users\MURIUK~1\AppData\Local\Temp\tmpin3crp7u.pdf
+2025-11-20 03:14:22,530 - __main__ - WARNING - No text extracted from document
+2025-11-20 03:14:22,532 - __main__ - INFO - Running SHA Compliance Analysis with Textract and ML-based Handwritten Support...
+2025-11-20 03:14:22,555 - __main__ - INFO - SHA ANALYSIS COMPLETE - Compliance Score: 0/100 - Status: EXTRACTION_ERROR
+2025-11-20 03:14:22,555 - __main__ - INFO - Document Type: DIGITAL_PDF
+2025-11-20 03:14:22,555 - __main__ - INFO - Extracted Characters: 57
+2025-11-20 03:14:22,555 - __main__ - INFO - Handwritten Detected: False
+2025-11-20 03:14:22,555 - __main__ - INFO - Extraction Method: Unknown
+2025-11-20 03:14:22,555 - __main__ - INFO - Textract Available: False
+2025-11-20 03:14:22,555 - __main__ - INFO - Fields Detected: []
+2025-11-20 03:14:22,555 - __main__ - INFO - Document saved to history with ID: 5
+2025-11-20 03:14:22,555 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2025 03:14:22] "POST /api/upload HTTP/1.1" 200 -
+2025-11-20 03:32:05,928 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Muriuki caro\\Desktop\\CLAIM FLOW\\claimflow backend\\app.py', reloading
+2025-11-20 03:32:06,732 - werkzeug - INFO -  * Restarting with stat
+2025-11-20 03:32:34,243 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.102:5000
+2025-11-20 03:32:34,243 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-20 03:32:34,251 - werkzeug - INFO -  * Restarting with stat
+2025-11-20 03:32:39,422 - werkzeug - WARNING -  * Debugger is active!
+2025-11-20 03:32:39,431 - werkzeug - INFO -  * Debugger PIN: 136-266-850
+2025-11-20 04:41:28,472 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Muriuki caro\\Desktop\\CLAIM FLOW\\claimflow backend\\app.py', reloading
+2025-11-20 04:41:30,940 - werkzeug - INFO -  * Restarting with stat
+2025-11-20 05:04:08,286 - werkzeug - INFO -  * Restarting with stat
