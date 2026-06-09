@@ -1,0 +1,188 @@
+{
+  "train_count": 10,
+  "train_results": [
+    {
+      "file": "20260531174745_Lydia_wanjiru_maina_theatre.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 8.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "20260531175451_jacinta_wanjiru_njeru_form.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 8.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "20260531180609_confirm_e2e.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 38.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "20260531180722_confirm_e2e_v2.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 22.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "20260531182444_jacinta_wanjiru_njeru_form.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 8.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "20260531185217_James_mbugua_theatres.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 12.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "20260531201407_Lydia_wanjiru_maina_theatre.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 0.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "23649c7e-7be4-42b1-9dc3-e33529583826_Lydia_wanjiru_maina_theatre.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 0.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "confirm_e2e.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 38.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    },
+    {
+      "file": "confirm_e2e_v2.pdf",
+      "success": false,
+      "llm_status": null,
+      "mml_status": null,
+      "confidence_score": 28.0,
+      "errors": [
+        "LLM interpretation failed; final decision not produced.",
+        "LLM status: unknown failure"
+      ]
+    }
+  ],
+  "final_result": {
+    "success": false,
+    "document_type": "medical_document",
+    "confidence_score": 0.0,
+    "is_compliant": false,
+    "requirements_met": false,
+    "extracted_data": {
+      "patient_name": null,
+      "patient_id": null,
+      "sha_membership_number": null,
+      "date_of_birth": "3yi",
+      "benefit_package": null,
+      "facility_id": null,
+      "facility_level": null,
+      "facility_name": "MARY HELP OF THE SICK MISSION HOSPITAL",
+      "diagnosis": "2ZIN FANNED OrERATION Ceif FTRA-orERAiloN",
+      "icd_codes": "o111",
+      "service_dates": null,
+      "service_tariff_code": null,
+      "service_cost": null,
+      "total_cost": null,
+      "submission_date": null,
+      "signature_or_stamp": null,
+      "medical_necessity_justification": null
+    },
+    "requirements_status": {
+      "patient_name": {
+        "found": false,
+        "value": null
+      },
+      "patient_id": {
+        "found": false,
+        "value": null
+      },
+      "diagnosis": {
+        "found": true,
+        "value": "2ZIN FANNED OrERATION Ceif FTRA-orERAiloN"
+      },
+      "service_date": {
+        "found": false,
+        "value": null
+      },
+      "physician_name": {
+        "found": false,
+        "value": null
+      },
+      "icd_codes": {
+        "found": true,
+        "value": "o111"
+      }
+    },
+    "errors": [
+      "LLM interpretation failed; final decision not produced.",
+      "LLM status: unknown failure"
+    ],
+    "ocr_info": {
+      "method": "advanced_ocr",
+      "confidence": 0,
+      "pages_processed": 6,
+      "engines_used": [],
+      "regions_detected": 0,
+      "preprocessing_steps": []
+    },
+    "llm_status": null,
+    "mml_status": null,
+    "annotated_pdf": "/home/pipi-ngure/Documents/claimflow/claimflow-backend/uploads/annotated_33c27d7a1f6d.pdf",
+    "annotated_exists": true
+  },
+  "ai_growth": {
+    "intelligence_score": 11,
+    "documents_processed": 11,
+    "patterns_mastered": 11
+  }
+}

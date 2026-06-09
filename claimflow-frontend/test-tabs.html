@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab Test</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .nav { display: flex; gap: 10px; margin-bottom: 20px; }
+        .nav-item { padding: 10px 20px; border: 1px solid #ccc; cursor: pointer; background: #f0f0f0; }
+        .nav-item.active { background: #2563eb; color: white; }
+        .tab-content { display: none; padding: 20px; border: 1px solid #ccc; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body>
+    <h1>Tab Navigation Test</h1>
+    
+    <div class="nav">
+        <button class="nav-item active" data-tab="upload">Upload</button>
+        <button class="nav-item" data-tab="dashboard">Dashboard</button>
+        <button class="nav-item" data-tab="analytics">Analytics</button>
+        <button class="nav-item" data-tab="settings">Settings</button>
+    </div>
+    
+    <div id="uploadTab" class="tab-content active">
+        <h2>Upload Tab</h2>
+        <p>This is the upload tab content.</p>
+    </div>
+    
+    <div id="dashboardTab" class="tab-content">
+        <h2>Dashboard Tab</h2>
+        <p>This is the dashboard tab content.</p>
+    </div>
+    
+    <div id="analyticsTab" class="tab-content">
+        <h2>Analytics Tab</h2>
+        <p>This is the analytics tab content.</p>
+    </div>
+    
+    <div id="settingsTab" class="tab-content">
+        <h2>Settings Tab</h2>
+        <p>This is the settings tab content.</p>
+    </div>
+    
+    <script>
+        function switchTab(tabId) {
+            console.log('Switching to tab:', tabId);
+            
+            // Update navigation
+            document.querySelectorAll('.nav-item').forEach(item => {
+                if (item.dataset.tab === tabId) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                const targetId = `${tabId}Tab`;
+                if (content.id === targetId) {
+                    content.classList.add('active');
+                    content.style.display = 'block';
+                } else {
+                    content.classList.remove('active');
+                    content.style.display = 'none';
+                }
+            });
+        }
+        
+        // Setup event listeners
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => switchTab(item.dataset.tab));
+        });
+    </script>
+</body>
+</html>

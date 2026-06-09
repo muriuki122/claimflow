@@ -1,0 +1,235 @@
+{
+    "growth_metrics": {
+        "intelligence_score": 45,
+        "documents_processed": 45,
+        "patterns_mastered": 45
+    },
+    "patterns": [
+        {
+            "insight": "Facility name 'MARY HELP OF THE SICK MISSION HOSPITAL' is present, but facility level (L1-L6) is not specified. The diagnosis is not clearly mapped to a valid SHA tariff or benefit package. Multiple signatures are present, suggesting some procedural compliance, but the lack of core administrative and clinical data is a major issue. General Insight: This facility's scanned documents often contain multiple signatures but suffer from poor OCR quality and missing structured data.",
+            "confidence": 18,
+            "discovered_at": "2026-05-31T18:47:40.844351"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring issue for this provider. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package. General Insight: This facility's scanned documents frequently contain multiple signatures but consistently lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-05-31T18:50:38.273807"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so the facility's compliance with SHA structure cannot be confirmed. There is no service tariff code or benefit package specified, so the diagnosis cannot be mapped to a SHA tariff or benefit package. No signature or stamp is present, which is required for authenticity. General Insight: This document, like others from similar contexts, is missing structured administrative fields (facility level, SHA membership number, tariff codes) and lacks authentication (signature/stamp), which is a recurring compliance risk.",
+            "confidence": 38,
+            "discovered_at": "2026-05-31T18:50:42.980564"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so facility structure compliance cannot be confirmed. No service tariff code or benefit package is specified, so the diagnosis cannot be mapped to a SHA tariff or benefit package. No signature or stamp is present, which is required for authenticity. General Insight: This document, like others in the accumulated knowledge, is missing structured administrative fields (facility level, SHA membership number, tariff codes) and lacks authentication (signature/stamp), which is a recurring compliance risk.",
+            "confidence": 32,
+            "discovered_at": "2026-05-31T18:50:45.949852"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring issue for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package. No signature or stamp is visible, which is required for authenticity. General Insight: This facility's scanned documents consistently lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-05-31T18:53:48.736631"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which matches the recurring compliance risk in accumulated knowledge. Diagnosis is described but not mapped to a valid SHA tariff or benefit package. ICD code is not valid. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. \nGeneral Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T19:00:20.729535"
+        },
+        {
+            "insight": "Facility name 'MARY HELP OF THE SICK MISSION HOSPITAL' is present, but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. \nGeneral Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T19:06:26.591347"
+        },
+        {
+            "insight": "Facility name 'MARY HELP OF THE SICK MISSION HOSPITAL' is present, but facility level (L1-L6) is missing, matching the recurring compliance risk in accumulated knowledge. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T19:12:40.854794"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so the facility's compliance with SHA structure cannot be confirmed. No service tariff code or benefit package is specified, so the diagnosis cannot be mapped to a SHA tariff or benefit package. No signature or stamp is present, which is required for authenticity. General Insight: This document, like others in the accumulated knowledge, is missing structured administrative fields (facility level, SHA membership number, tariff codes) and lacks authentication (signature/stamp), which is a recurring compliance risk.",
+            "confidence": 38,
+            "discovered_at": "2026-05-31T19:12:45.666696"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so facility structure compliance cannot be confirmed. No service tariff code or benefit package is specified, so the diagnosis cannot be mapped to a SHA tariff or benefit package. No signature or stamp is present, which is required for authenticity. General Insight: This document, like others in the accumulated knowledge, is missing structured administrative fields (facility level, SHA membership number, tariff codes) and lacks authentication (signature/stamp), which is a recurring compliance risk.",
+            "confidence": 38,
+            "discovered_at": "2026-05-31T19:12:50.583711"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which matches the recurring compliance risk in accumulated knowledge. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. \nGeneral Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T19:19:02.382613"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T19:30:23.598503"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. \nGeneral Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T19:53:33.998880"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package, and the ICD code format is questionable. No patient or provider signature/stamp is visible, which is required for authenticity. General Insight: This facility's scanned documents consistently lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-05-31T19:56:29.292424"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so the facility's compliance with SHA structure cannot be confirmed. No service tariff code or benefit package is specified, so the diagnosis cannot be mapped to a SHA tariff or benefit package. No signature or stamp is present, which is required for authenticity. General Insight: This document, like others in the accumulated knowledge, is missing structured administrative fields (facility level, SHA membership number, tariff codes) and lacks authentication (signature/stamp), which is a recurring compliance risk.",
+            "confidence": 38,
+            "discovered_at": "2026-05-31T19:56:32.958874"
+        },
+        {
+            "insight": "Facility name is present, but facility level (L1-L6) is missing, which is a recurring compliance risk as per accumulated knowledge. No SHA membership number, facility ID, service tariff code, or benefit package is provided. No signature or stamp is present, which is required for authenticity. General Insight: This document, like others in the accumulated knowledge, is missing structured administrative fields (facility level, SHA membership number, tariff codes) and lacks authentication (signature/stamp), which is a recurring compliance risk.",
+            "confidence": 38,
+            "discovered_at": "2026-05-31T19:56:37.567158"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package, and the ICD code format ('JE1e') is questionable. No patient or provider ID, SHA membership number, service dates, or cost fields are present. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T19:59:35.944824"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 28,
+            "discovered_at": "2026-05-31T20:05:56.872968"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package, and the ICD code format ('o111') is questionable. No patient or provider ID, SHA membership number, service dates, or cost fields are present. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T20:11:50.970705"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package, and the ICD code format ('o111') is questionable. No patient or provider ID, SHA membership number, service dates, or cost fields are present. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 28,
+            "discovered_at": "2026-05-31T20:17:38.618625"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. No core administrative data (patient name, ID, DOB, service dates, SHA membership number, facility ID, tariff codes) is present. Multiple signatures/stamps are present, but lack of structured data is a major compliance failure. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 28,
+            "discovered_at": "2026-05-31T20:22:47.885280"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not valid or mapped to any SHA tariff or benefit package. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data (patient name, ID, DOB, service dates, facility level, tariff codes) is a major compliance failure. \nGeneral Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 28,
+            "discovered_at": "2026-05-31T20:29:13.097367"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package. No patient or provider ID, SHA membership number, service dates, or cost fields are present. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 28,
+            "discovered_at": "2026-05-31T20:32:14.242259"
+        },
+        {
+            "insight": "Facility name ('MARY HELP OF THE SICK MISSION HOSPITAL') is present, but facility level (L1-L6) is missing, which is a recurring compliance risk as per accumulated knowledge. Diagnosis and ICD code ('o111') are present but not mapped to any SHA tariff or benefit package, and the ICD code format is questionable. No patient or provider ID, SHA membership number, service dates, or cost fields are present. Multiple signatures/stamps are present, which is positive for authenticity, but the lack of core administrative and clinical data is a major compliance failure. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 28,
+            "discovered_at": "2026-05-31T20:37:59.231809"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so the facility's compliance with SHA structure cannot be confirmed. No service tariff code or benefit package is specified, so the diagnosis cannot be mapped to a SHA tariff or benefit package. No signature or stamp is present, which is required for authenticity. General Insight: This document, like others in the accumulated knowledge, is missing structured administrative fields (facility level, SHA membership number, tariff codes) and lacks authentication (signature/stamp), which is a recurring compliance risk.",
+            "confidence": 44,
+            "discovered_at": "2026-05-31T20:38:03.222447"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so facility structure compliance cannot be confirmed. No SHA membership number, facility ID, service tariff code, or benefit package is provided. No signature or stamp is present, which is required for authenticity. This matches a recurring compliance risk in accumulated knowledge: documents from this context often lack structured administrative fields and authentication. General Insight: Digital PDFs from this facility lack core SHA-required fields and authentication, mirroring a pattern of incomplete digital submissions.",
+            "confidence": 32,
+            "discovered_at": "2026-05-31T20:38:08.650540"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. No SHA membership number, patient ID, or service dates are present. ICD code 'C10' is present but not mapped to any SHA tariff or benefit package, and no diagnosis description is provided. No explicit signature or stamp is found, only a digital watermark. General Insight: This facility's scanned documents consistently contain the facility name and digital watermarks but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T20:49:43.578962"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package, and the ICD code format ('JE1e') is questionable. No patient or provider ID, SHA membership number, service dates, or cost fields are present. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 32,
+            "discovered_at": "2026-05-31T20:56:23.980709"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis is present but not mapped to any SHA tariff or benefit package, and no ICD code is valid or present. No patient or provider ID, SHA membership number, service dates, or cost fields are present. No signature or stamp is visible, which is required for authenticity. General Insight: This facility's scanned documents consistently contain the facility name and partial clinical data but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-05-31T21:00:45.312224"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. No SHA membership number, patient ID, or service dates are present. ICD code 'G34' is present but not mapped to any SHA tariff or benefit package, and no diagnosis description is provided. No explicit signature or stamp is found, only a digital watermark. \nGeneral Insight: This facility's scanned documents consistently contain the facility name and digital watermarks but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-05-31T21:19:14.712615"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. ICD code 'C10' is present but not mapped to any SHA tariff or benefit package, and no diagnosis description is provided. No SHA membership number, patient ID, or service dates are present. No explicit signature or stamp is found, only a digital watermark. \nGeneral Insight: This facility's scanned documents consistently contain the facility name and digital watermarks but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-05-31T21:25:10.680507"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. No SHA membership number, patient ID, or service dates are present. ICD code 'G34' is present but not mapped to any SHA tariff or benefit package, and no diagnosis description is provided. No explicit signature or stamp is found, only digital watermarks. General Insight: This facility's scanned documents consistently contain the facility name and digital watermarks but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-05-31T21:48:11.682333"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis is present but not mapped to any SHA tariff or benefit package, and no ICD code is valid or present. No patient or provider ID, SHA membership number, service dates, or cost fields are present. General Insight: This facility's scanned documents consistently contain the facility name and partial clinical data but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-06-01T05:07:10.387405"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis is present in narrative form but not mapped to any SHA tariff or benefit package, and the ICD code format is non-standard. No SHA membership number, patient ID, or service dates are present. Multiple signatures/stamps are present, which is positive for authenticity. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 32,
+            "discovered_at": "2026-06-01T05:18:54.451565"
+        },
+        {
+            "insight": "Facility level (L1-L6) is missing, so the facility's compliance with SHA structure cannot be confirmed. No service tariff code or benefit package is specified, so the diagnosis cannot be mapped to a SHA tariff or benefit package. No signature or stamp is present, which is required for authenticity. This matches a recurring compliance risk in accumulated knowledge: digital PDFs from this context often lack structured administrative fields and authentication. General Insight: This document, like others from Nairobi Hospital, lacks facility level, SHA membership number, service tariff code, and authentication, indicating a systemic risk of incomplete digital submissions.",
+            "confidence": 38,
+            "discovered_at": "2026-06-01T05:31:48.123634"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis is present but not mapped to any SHA tariff or benefit package, and no ICD code is valid or present. No patient or provider ID, SHA membership number, service dates, or cost fields are present. No signature or stamp is visible, which is required for authenticity. General Insight: This facility's scanned documents consistently contain the facility name and partial clinical data but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-06-01T12:25:05.640014"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, which is a recurring compliance risk for this provider as per accumulated knowledge. No diagnosis, ICD code, or SHA tariff mapping is present. No administrative or clinical data fields are complete. General Insight: This facility's scanned documents consistently contain the facility name but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 10,
+            "discovered_at": "2026-06-01T12:59:16.781748"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, matching a recurring compliance risk for this provider. Diagnosis is present but not mapped to any SHA tariff or benefit package, and no valid ICD code is present. No SHA membership number, patient ID, or service dates are present. Multiple signatures/stamps are present, which is positive for authenticity. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 22,
+            "discovered_at": "2026-06-01T13:12:44.131380"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, matching a recurring compliance risk for this provider. Diagnosis is present in narrative form but not mapped to any SHA tariff or benefit package, and no valid ICD code is present. No SHA membership number, patient ID, or service dates are present. Multiple signatures/stamps are present, which is positive for authenticity. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 32,
+            "discovered_at": "2026-06-01T17:08:51.275427"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, matching a recurring compliance risk for this provider. Diagnosis is present in narrative form but not mapped to any SHA tariff or benefit package, and the ICD code format is non-standard. No SHA membership number, patient ID, or service dates are present. Multiple signatures/stamps are present, which is positive for authenticity. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 32,
+            "discovered_at": "2026-06-01T20:08:27.812681"
+        },
+        {
+            "insight": "Facility name and level are both present (rare for this provider), but all other required fields are missing or non-compliant. The ICD code is not valid per WHO standards and is not mapped to any SHA tariff or benefit package. No diagnosis description is present. No signature or stamp is visible, which is required for authenticity. General Insight: This facility's scanned documents occasionally include the facility level, but consistently lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-06-08T11:33:04.980510+00:00"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, matching a recurring compliance risk for this provider. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package, and the ICD code is non-standard. No SHA membership number, patient ID is invalid, and no service dates are present. Signature is present, which is positive for authenticity. General Insight: This facility's scanned documents consistently contain the facility name and a signature, but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-06-08T11:46:14.629593+00:00"
+        },
+        {
+            "insight": "Facility name is present but facility level (L1-L6) is missing, matching a recurring compliance risk for this provider. Diagnosis and ICD code are present but not mapped to any SHA tariff or benefit package, and the ICD code is non-standard. No SHA membership number, patient ID, or service dates are present. No signature or stamp is visible, which is required for authenticity. General Insight: This facility's scanned documents consistently contain the facility name and partial clinical data but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-06-08T11:52:44.077540+00:00"
+        },
+        {
+            "insight": "Facility name ('MARY HELP OF THE SICK MISSION HOSPITAL') is present on multiple pages, but facility level (L1-L6) is missing, matching a recurring compliance risk for this provider as per accumulated knowledge. Diagnosis is present but not mapped to any SHA tariff or benefit package, and the ICD code is non-standard. No SHA membership number, patient ID, or service dates are present. Multiple signatures/stamps are present, which is positive for authenticity. General Insight: This facility's scanned documents consistently contain multiple signatures/stamps but lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-06-08T12:12:26.947959+00:00"
+        },
+        {
+            "insight": "Facility name is present and facility level 'L4' is mentioned, which is rare for this provider, but all other required fields are missing or non-compliant. The ICD code is not valid per WHO standards and is not mapped to any SHA tariff or benefit package. No diagnosis description is present. No signature or stamp is visible, which is required for authenticity. General Insight: This facility's scanned documents occasionally include the facility level, but consistently lack structured administrative and clinical data, likely due to poor OCR quality and incomplete form completion.",
+            "confidence": 18,
+            "discovered_at": "2026-06-08T13:10:57.259892+00:00"
+        }
+    ],
+    "learned_at": "2026-06-08T13:10:57.259892+00:00"
+}
