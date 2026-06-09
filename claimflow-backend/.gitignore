@@ -1,6 +1,40 @@
-.env
-venv/
+# Python
 __pycache__/
-*.pyc
-uploads/
+*.py[cod]
+*.class
+*.so
+.Python
+.venv/
+env/
+venv/
+.env
+.venv
+
+# Model cache (large files)
 storage/model_cache/
+*.pkl
+*.h5
+*.pth
+*.bin
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads and temp files
+uploads/
+temp/
+*.tmp
+
+# Secrets
+config.py
+.secrets
